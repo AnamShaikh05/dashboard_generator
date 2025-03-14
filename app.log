@@ -1,0 +1,2044 @@
+2025-03-01 16:54:37,736 WARNING:  * Debugger is active!
+2025-03-01 16:54:37,739 INFO:  * Debugger PIN: 574-224-184
+2025-03-01 16:57:20,488 INFO: 127.0.0.1 - - [01/Mar/2025 16:57:20] "GET / HTTP/1.1" 200 -
+2025-03-01 16:57:20,557 INFO: 127.0.0.1 - - [01/Mar/2025 16:57:20] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-01 16:57:20,558 INFO: 127.0.0.1 - - [01/Mar/2025 16:57:20] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-01 16:57:22,085 INFO: 127.0.0.1 - - [01/Mar/2025 16:57:22] "GET /login HTTP/1.1" 200 -
+2025-03-01 16:57:22,113 INFO: 127.0.0.1 - - [01/Mar/2025 16:57:22] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-01 16:57:22,114 INFO: 127.0.0.1 - - [01/Mar/2025 16:57:22] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-01 16:57:29,332 INFO: 127.0.0.1 - - [01/Mar/2025 16:57:29] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-03-01 16:57:29,358 INFO: 127.0.0.1 - - [01/Mar/2025 16:57:29] "GET /dashboard HTTP/1.1" 200 -
+2025-03-01 16:57:29,388 INFO: 127.0.0.1 - - [01/Mar/2025 16:57:29] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-01 16:57:29,390 INFO: 127.0.0.1 - - [01/Mar/2025 16:57:29] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-01 16:59:07,292 INFO: 127.0.0.1 - - [01/Mar/2025 16:59:07] "POST /delete_dashboard/7 HTTP/1.1" 200 -
+2025-03-01 16:59:12,473 INFO: 127.0.0.1 - - [01/Mar/2025 16:59:12] "GET /create HTTP/1.1" 200 -
+2025-03-01 16:59:12,507 INFO: 127.0.0.1 - - [01/Mar/2025 16:59:12] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-01 16:59:12,508 INFO: 127.0.0.1 - - [01/Mar/2025 16:59:12] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-01 17:00:05,515 INFO: 127.0.0.1 - - [01/Mar/2025 17:00:05] "POST /create HTTP/1.1" 200 -
+2025-03-01 17:00:05,548 INFO: 127.0.0.1 - - [01/Mar/2025 17:00:05] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-01 17:00:05,551 INFO: 127.0.0.1 - - [01/Mar/2025 17:00:05] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-01 17:00:07,054 INFO: 127.0.0.1 - - [01/Mar/2025 17:00:07] "POST /get_columns HTTP/1.1" 200 -
+2025-03-01 17:00:30,796 INFO: 127.0.0.1 - - [01/Mar/2025 17:00:30] "POST /get_column_values HTTP/1.1" 200 -
+2025-03-01 17:00:59,601 INFO: 127.0.0.1 - - [01/Mar/2025 17:00:59] "POST /get_column_values HTTP/1.1" 200 -
+2025-03-01 17:01:14,214 DEBUG: Received dashboard data: {
+  "dashboard_name": "sales db",
+  "sheet_name": "List of Orders",
+  "theme": "dark",
+  "graphs": [
+    {
+      "name": "Graph 1",
+      "type": "bar",
+      "x_axis": "Category",
+      "y_axis": "Sales",
+      "filter_column": "Category",
+      "filter_values": [
+        "Office Supplies",
+        "Furniture",
+        "Technology"
+      ],
+      "aggregation": null,
+      "color": "#3498db"
+    },
+    {
+      "name": "Graph 2",
+      "type": "pie",
+      "x_axis": "State",
+      "y_axis": "Profit",
+      "filter_column": "State",
+      "filter_values": [
+        "Stockholm",
+        "England",
+        "Auvergne-Rh\u00f4ne-Alpes",
+        "Provence-Alpes-C\u00f4te d'Azur"
+      ],
+      "aggregation": null,
+      "color": "#2ecc71"
+    }
+  ]
+}
+2025-03-01 17:01:14,233 INFO: Dashboard saved successfully with ID: 8
+2025-03-01 17:01:14,234 INFO: 127.0.0.1 - - [01/Mar/2025 17:01:14] "POST /save_dashboard HTTP/1.1" 200 -
+2025-03-01 17:01:16,214 INFO: 127.0.0.1 - - [01/Mar/2025 17:01:16] "GET /view_dashboard/8 HTTP/1.1" 200 -
+2025-03-01 17:01:16,233 INFO: 127.0.0.1 - - [01/Mar/2025 17:01:16] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-01 17:01:16,235 INFO: 127.0.0.1 - - [01/Mar/2025 17:01:16] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-01 17:01:17,551 INFO: 127.0.0.1 - - [01/Mar/2025 17:01:17] "GET /get_dashboard_data/8 HTTP/1.1" 200 -
+2025-03-01 17:01:22,854 INFO: 127.0.0.1 - - [01/Mar/2025 17:01:22] "GET /view_dashboard/8 HTTP/1.1" 200 -
+2025-03-01 17:01:22,875 INFO: 127.0.0.1 - - [01/Mar/2025 17:01:22] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-01 17:01:22,875 INFO: 127.0.0.1 - - [01/Mar/2025 17:01:22] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-01 17:01:24,189 INFO: 127.0.0.1 - - [01/Mar/2025 17:01:24] "GET /get_dashboard_data/8 HTTP/1.1" 200 -
+2025-03-01 17:01:25,143 INFO: 127.0.0.1 - - [01/Mar/2025 17:01:25] "GET /view_dashboard/8 HTTP/1.1" 200 -
+2025-03-01 17:01:25,161 INFO: 127.0.0.1 - - [01/Mar/2025 17:01:25] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-01 17:01:25,161 INFO: 127.0.0.1 - - [01/Mar/2025 17:01:25] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-01 17:01:26,444 INFO: 127.0.0.1 - - [01/Mar/2025 17:01:26] "GET /get_dashboard_data/8 HTTP/1.1" 200 -
+2025-03-01 17:01:27,288 INFO: 127.0.0.1 - - [01/Mar/2025 17:01:27] "GET /view_dashboard/8 HTTP/1.1" 200 -
+2025-03-01 17:01:27,308 INFO: 127.0.0.1 - - [01/Mar/2025 17:01:27] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-01 17:01:27,310 INFO: 127.0.0.1 - - [01/Mar/2025 17:01:27] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-01 17:01:28,620 INFO: 127.0.0.1 - - [01/Mar/2025 17:01:28] "GET /get_dashboard_data/8 HTTP/1.1" 200 -
+2025-03-01 17:04:07,087 INFO: 127.0.0.1 - - [01/Mar/2025 17:04:07] "POST /create HTTP/1.1" 200 -
+2025-03-01 17:04:07,117 INFO: 127.0.0.1 - - [01/Mar/2025 17:04:07] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-01 17:04:07,118 INFO: 127.0.0.1 - - [01/Mar/2025 17:04:07] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-01 17:04:08,410 INFO: 127.0.0.1 - - [01/Mar/2025 17:04:08] "POST /get_columns HTTP/1.1" 200 -
+2025-03-01 17:04:23,399 INFO: 127.0.0.1 - - [01/Mar/2025 17:04:23] "POST /get_column_values HTTP/1.1" 200 -
+2025-03-01 17:04:44,262 DEBUG: Received dashboard data: {
+  "dashboard_name": "sales db",
+  "sheet_name": "List of Orders",
+  "theme": "light",
+  "graphs": [
+    {
+      "name": "Graph 1",
+      "type": "bar",
+      "x_axis": "Country",
+      "y_axis": "Profit",
+      "filter_column": "Country",
+      "filter_values": [
+        "United Kingdom",
+        "France",
+        "Italy",
+        "Spain",
+        "Germany"
+      ],
+      "aggregation": null,
+      "color": "#3498db"
+    }
+  ]
+}
+2025-03-01 17:04:44,282 INFO: Dashboard saved successfully with ID: 9
+2025-03-01 17:04:44,282 INFO: 127.0.0.1 - - [01/Mar/2025 17:04:44] "POST /save_dashboard HTTP/1.1" 200 -
+2025-03-01 17:04:45,653 INFO: 127.0.0.1 - - [01/Mar/2025 17:04:45] "GET /view_dashboard/9 HTTP/1.1" 200 -
+2025-03-01 17:04:45,671 INFO: 127.0.0.1 - - [01/Mar/2025 17:04:45] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-01 17:04:45,672 INFO: 127.0.0.1 - - [01/Mar/2025 17:04:45] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-01 17:04:46,964 INFO: 127.0.0.1 - - [01/Mar/2025 17:04:46] "GET /get_dashboard_data/9 HTTP/1.1" 200 -
+2025-03-01 17:04:56,150 INFO: 127.0.0.1 - - [01/Mar/2025 17:04:56] "GET /view_dashboard/9 HTTP/1.1" 200 -
+2025-03-01 17:04:56,170 INFO: 127.0.0.1 - - [01/Mar/2025 17:04:56] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-01 17:04:56,171 INFO: 127.0.0.1 - - [01/Mar/2025 17:04:56] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-01 17:04:57,456 INFO: 127.0.0.1 - - [01/Mar/2025 17:04:57] "GET /get_dashboard_data/9 HTTP/1.1" 200 -
+2025-03-01 17:04:58,320 INFO: 127.0.0.1 - - [01/Mar/2025 17:04:58] "GET /create HTTP/1.1" 200 -
+2025-03-01 17:05:05,450 INFO: 127.0.0.1 - - [01/Mar/2025 17:05:05] "POST /create HTTP/1.1" 200 -
+2025-03-01 17:05:05,470 INFO: 127.0.0.1 - - [01/Mar/2025 17:05:05] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-01 17:05:05,470 INFO: 127.0.0.1 - - [01/Mar/2025 17:05:05] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-01 17:05:06,797 INFO: 127.0.0.1 - - [01/Mar/2025 17:05:06] "POST /get_columns HTTP/1.1" 200 -
+2025-03-01 17:05:29,085 INFO: 127.0.0.1 - - [01/Mar/2025 17:05:29] "POST /get_column_values HTTP/1.1" 200 -
+2025-03-01 17:05:49,205 INFO: 127.0.0.1 - - [01/Mar/2025 17:05:49] "POST /get_column_values HTTP/1.1" 200 -
+2025-03-01 17:06:12,599 DEBUG: Received dashboard data: {
+  "dashboard_name": "sales db",
+  "sheet_name": "List of Orders",
+  "theme": "light",
+  "graphs": [
+    {
+      "name": "Graph 1",
+      "type": "bar",
+      "x_axis": "Country",
+      "y_axis": "Sales",
+      "filter_column": "Country",
+      "filter_values": [
+        "Sweden",
+        "United Kingdom",
+        "France",
+        "Italy"
+      ],
+      "aggregation": null,
+      "color": "#3498db"
+    },
+    {
+      "name": "Graph 2",
+      "type": "pie",
+      "x_axis": "City",
+      "y_axis": "Profit",
+      "filter_column": "City",
+      "filter_values": [
+        "Stockholm",
+        "Southport",
+        "Valence",
+        "Birmingham"
+      ],
+      "aggregation": null,
+      "color": "#2ecc71"
+    }
+  ]
+}
+2025-03-01 17:06:12,611 INFO: Dashboard saved successfully with ID: 10
+2025-03-01 17:06:12,612 INFO: 127.0.0.1 - - [01/Mar/2025 17:06:12] "POST /save_dashboard HTTP/1.1" 200 -
+2025-03-01 17:06:15,281 INFO: 127.0.0.1 - - [01/Mar/2025 17:06:15] "GET /view_dashboard/10 HTTP/1.1" 200 -
+2025-03-01 17:06:15,317 INFO: 127.0.0.1 - - [01/Mar/2025 17:06:15] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-01 17:06:15,318 INFO: 127.0.0.1 - - [01/Mar/2025 17:06:15] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-01 17:06:16,641 INFO: 127.0.0.1 - - [01/Mar/2025 17:06:16] "GET /get_dashboard_data/10 HTTP/1.1" 200 -
+2025-03-01 17:09:57,296 INFO:  * Detected change in 'D:\\powerbi-dashboard-project\\app.py', reloading
+2025-03-01 17:09:57,297 INFO:  * Detected change in 'D:\\powerbi-dashboard-project\\app.py', reloading
+2025-03-01 17:09:59,719 WARNING:  * Debugger is active!
+2025-03-01 17:09:59,723 INFO:  * Debugger PIN: 574-224-184
+2025-03-01 17:10:12,665 INFO: 127.0.0.1 - - [01/Mar/2025 17:10:12] "GET /view_dashboard/10 HTTP/1.1" 200 -
+2025-03-01 17:10:12,788 INFO: 127.0.0.1 - - [01/Mar/2025 17:10:12] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-01 17:10:14,722 INFO: 127.0.0.1 - - [01/Mar/2025 17:10:14] "GET /get_dashboard_data/10 HTTP/1.1" 200 -
+2025-03-01 17:10:33,712 INFO: 127.0.0.1 - - [01/Mar/2025 17:10:33] "GET /view_dashboard/10 HTTP/1.1" 200 -
+2025-03-01 17:10:33,731 INFO: 127.0.0.1 - - [01/Mar/2025 17:10:33] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-01 17:10:35,015 INFO: 127.0.0.1 - - [01/Mar/2025 17:10:35] "GET /get_dashboard_data/10 HTTP/1.1" 200 -
+2025-03-01 17:12:42,690 INFO: 127.0.0.1 - - [01/Mar/2025 17:12:42] "GET /view_dashboard/10 HTTP/1.1" 200 -
+2025-03-01 17:12:42,728 INFO: 127.0.0.1 - - [01/Mar/2025 17:12:42] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-01 17:12:42,729 INFO: 127.0.0.1 - - [01/Mar/2025 17:12:42] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-01 17:12:43,358 INFO: 127.0.0.1 - - [01/Mar/2025 17:12:43] "GET /get_dashboard_data/10 HTTP/1.1" 200 -
+2025-03-01 17:14:11,205 INFO:  * Detected change in 'D:\\powerbi-dashboard-project\\app.py', reloading
+2025-03-01 17:14:11,205 INFO:  * Detected change in 'D:\\powerbi-dashboard-project\\app.py', reloading
+2025-03-01 17:14:11,206 INFO:  * Detected change in 'D:\\powerbi-dashboard-project\\app.py', reloading
+2025-03-01 17:14:12,749 WARNING:  * Debugger is active!
+2025-03-01 17:14:12,753 INFO:  * Debugger PIN: 574-224-184
+2025-03-01 17:14:14,770 INFO: 127.0.0.1 - - [01/Mar/2025 17:14:14] "GET /view_dashboard/10 HTTP/1.1" 200 -
+2025-03-01 17:14:14,813 INFO: 127.0.0.1 - - [01/Mar/2025 17:14:14] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-01 17:14:15,439 INFO: 127.0.0.1 - - [01/Mar/2025 17:14:15] "GET /get_dashboard_data/10 HTTP/1.1" 200 -
+2025-03-01 17:14:15,830 INFO: 127.0.0.1 - - [01/Mar/2025 17:14:15] "POST /get_columns HTTP/1.1" 200 -
+2025-03-01 17:16:11,154 INFO: 127.0.0.1 - - [01/Mar/2025 17:16:11] "GET /view_dashboard/10 HTTP/1.1" 200 -
+2025-03-01 17:16:11,175 INFO: 127.0.0.1 - - [01/Mar/2025 17:16:11] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-01 17:16:11,176 INFO: 127.0.0.1 - - [01/Mar/2025 17:16:11] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-01 17:16:12,536 INFO: 127.0.0.1 - - [01/Mar/2025 17:16:12] "GET /get_dashboard_data/10 HTTP/1.1" 200 -
+2025-03-01 17:16:32,263 INFO: 127.0.0.1 - - [01/Mar/2025 17:16:32] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-01 17:16:50,750 INFO: 127.0.0.1 - - [01/Mar/2025 17:16:50] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-01 17:18:18,439 INFO: 127.0.0.1 - - [01/Mar/2025 17:18:18] "GET /view_dashboard/10 HTTP/1.1" 200 -
+2025-03-01 17:18:18,460 INFO: 127.0.0.1 - - [01/Mar/2025 17:18:18] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-01 17:18:18,462 INFO: 127.0.0.1 - - [01/Mar/2025 17:18:18] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-01 17:18:20,149 INFO: 127.0.0.1 - - [01/Mar/2025 17:18:20] "GET /get_dashboard_data/10 HTTP/1.1" 200 -
+2025-03-01 17:19:16,606 INFO: 127.0.0.1 - - [01/Mar/2025 17:19:16] "GET /create HTTP/1.1" 200 -
+2025-03-01 17:19:23,134 INFO: 127.0.0.1 - - [01/Mar/2025 17:19:23] "POST /create HTTP/1.1" 200 -
+2025-03-01 17:19:23,152 INFO: 127.0.0.1 - - [01/Mar/2025 17:19:23] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-01 17:19:23,153 INFO: 127.0.0.1 - - [01/Mar/2025 17:19:23] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-01 17:19:24,433 INFO: 127.0.0.1 - - [01/Mar/2025 17:19:24] "POST /get_columns HTTP/1.1" 200 -
+2025-03-01 23:26:36,400 WARNING:  * Debugger is active!
+2025-03-01 23:26:36,410 INFO:  * Debugger PIN: 125-033-740
+2025-03-01 23:26:46,509 INFO: 127.0.0.1 - - [01/Mar/2025 23:26:46] "POST /create HTTP/1.1" 200 -
+2025-03-01 23:26:46,529 INFO: 127.0.0.1 - - [01/Mar/2025 23:26:46] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-01 23:26:46,530 INFO: 127.0.0.1 - - [01/Mar/2025 23:26:46] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-01 23:26:46,926 INFO: 127.0.0.1 - - [01/Mar/2025 23:26:46] "POST /get_columns HTTP/1.1" 200 -
+2025-03-01 23:26:59,152 INFO: 127.0.0.1 - - [01/Mar/2025 23:26:59] "POST /get_column_values HTTP/1.1" 200 -
+2025-03-01 23:27:15,989 DEBUG: Received dashboard data: {
+  "dashboard_name": "sales db",
+  "sheet_name": "List of Orders",
+  "theme": "light",
+  "graphs": [
+    {
+      "name": "Graph 1",
+      "type": "bar",
+      "x_axis": "Country",
+      "y_axis": "Sales",
+      "filter_column": "Country",
+      "filter_values": [
+        "Sweden",
+        "United Kingdom",
+        "France",
+        "Italy"
+      ],
+      "aggregation": null,
+      "color": "#3498db"
+    }
+  ]
+}
+2025-03-01 23:27:16,009 INFO: Dashboard saved successfully with ID: 11
+2025-03-01 23:27:16,010 INFO: 127.0.0.1 - - [01/Mar/2025 23:27:16] "POST /save_dashboard HTTP/1.1" 200 -
+2025-03-01 23:27:17,574 INFO: 127.0.0.1 - - [01/Mar/2025 23:27:17] "GET /view_dashboard/11 HTTP/1.1" 200 -
+2025-03-01 23:27:17,598 INFO: 127.0.0.1 - - [01/Mar/2025 23:27:17] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-01 23:27:17,598 INFO: 127.0.0.1 - - [01/Mar/2025 23:27:17] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-01 23:27:18,926 INFO: 127.0.0.1 - - [01/Mar/2025 23:27:18] "GET /get_dashboard_data/11 HTTP/1.1" 200 -
+2025-03-01 23:27:26,878 INFO: 127.0.0.1 - - [01/Mar/2025 23:27:26] "POST /create HTTP/1.1" 200 -
+2025-03-01 23:27:26,909 INFO: 127.0.0.1 - - [01/Mar/2025 23:27:26] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-01 23:27:26,912 INFO: 127.0.0.1 - - [01/Mar/2025 23:27:26] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-01 23:27:28,193 INFO: 127.0.0.1 - - [01/Mar/2025 23:27:28] "POST /get_columns HTTP/1.1" 200 -
+2025-03-01 23:27:44,194 INFO: 127.0.0.1 - - [01/Mar/2025 23:27:44] "POST /get_column_values HTTP/1.1" 200 -
+2025-03-01 23:28:06,165 INFO: 127.0.0.1 - - [01/Mar/2025 23:28:06] "POST /get_column_values HTTP/1.1" 200 -
+2025-03-01 23:28:09,196 DEBUG: Received dashboard data: {
+  "dashboard_name": "sales db",
+  "sheet_name": "List of Orders",
+  "theme": "light",
+  "graphs": [
+    {
+      "name": "Graph 1",
+      "type": "bar",
+      "x_axis": "Country",
+      "y_axis": "Sales",
+      "filter_column": "Country",
+      "filter_values": [
+        "Sweden",
+        "United Kingdom",
+        "France",
+        "Italy"
+      ],
+      "aggregation": null,
+      "color": "#3498db"
+    },
+    {
+      "name": "Graph 2",
+      "type": "pie",
+      "x_axis": "Category",
+      "y_axis": "Profit",
+      "filter_column": "Category",
+      "filter_values": [],
+      "aggregation": null,
+      "color": "#2ecc71"
+    }
+  ]
+}
+2025-03-01 23:28:09,215 INFO: Dashboard saved successfully with ID: 12
+2025-03-01 23:28:09,217 INFO: 127.0.0.1 - - [01/Mar/2025 23:28:09] "POST /save_dashboard HTTP/1.1" 200 -
+2025-03-01 23:28:10,866 INFO: 127.0.0.1 - - [01/Mar/2025 23:28:10] "GET /view_dashboard/12 HTTP/1.1" 200 -
+2025-03-01 23:28:10,893 INFO: 127.0.0.1 - - [01/Mar/2025 23:28:10] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-01 23:28:10,895 INFO: 127.0.0.1 - - [01/Mar/2025 23:28:10] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-01 23:28:12,202 INFO: 127.0.0.1 - - [01/Mar/2025 23:28:12] "GET /get_dashboard_data/12 HTTP/1.1" 200 -
+2025-03-01 23:28:24,568 INFO: 127.0.0.1 - - [01/Mar/2025 23:28:24] "GET /create HTTP/1.1" 200 -
+2025-03-01 23:28:34,088 INFO: 127.0.0.1 - - [01/Mar/2025 23:28:34] "POST /create HTTP/1.1" 200 -
+2025-03-01 23:28:34,108 INFO: 127.0.0.1 - - [01/Mar/2025 23:28:34] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-01 23:28:34,110 INFO: 127.0.0.1 - - [01/Mar/2025 23:28:34] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-01 23:28:35,805 INFO: 127.0.0.1 - - [01/Mar/2025 23:28:35] "POST /get_columns HTTP/1.1" 200 -
+2025-03-01 23:29:00,369 INFO: 127.0.0.1 - - [01/Mar/2025 23:29:00] "POST /get_column_values HTTP/1.1" 200 -
+2025-03-01 23:29:37,227 INFO: 127.0.0.1 - - [01/Mar/2025 23:29:37] "POST /get_column_values HTTP/1.1" 200 -
+2025-03-01 23:29:57,258 INFO: 127.0.0.1 - - [01/Mar/2025 23:29:57] "POST /get_column_values HTTP/1.1" 200 -
+2025-03-01 23:31:53,544 INFO: 127.0.0.1 - - [01/Mar/2025 23:31:53] "POST /get_column_values HTTP/1.1" 200 -
+2025-03-01 23:32:46,988 DEBUG: Received dashboard data: {
+  "dashboard_name": "dashboard",
+  "sheet_name": "List of Orders",
+  "theme": "dark",
+  "graphs": [
+    {
+      "name": "country and sales",
+      "type": "bar",
+      "x_axis": "Country",
+      "y_axis": "Sales",
+      "filter_column": "Country",
+      "filter_values": [
+        "Sweden",
+        "United Kingdom",
+        "France",
+        "Italy"
+      ],
+      "aggregation": null,
+      "color": "#3498db"
+    },
+    {
+      "name": "city and profit",
+      "type": "line",
+      "x_axis": "City",
+      "y_axis": "Profit",
+      "filter_column": "City",
+      "filter_values": [
+        "Stockholm",
+        "Southport",
+        "Valence",
+        "Birmingham"
+      ],
+      "aggregation": null,
+      "color": "#2ecc71"
+    },
+    {
+      "name": "subcategory and profit",
+      "type": "pie",
+      "x_axis": "Sub-Category",
+      "y_axis": "Profit",
+      "filter_column": "Sub-Category",
+      "filter_values": [
+        "Paper",
+        "Bookcases",
+        "Art",
+        "Binders",
+        "Tables"
+      ],
+      "aggregation": null,
+      "color": "#e74c3c"
+    },
+    {
+      "name": "gauge card of avg sales",
+      "type": "gauge",
+      "x_axis": "Order ID",
+      "y_axis": "Sales",
+      "filter_column": null,
+      "filter_values": [],
+      "aggregation": "avg",
+      "color": "#f39c12"
+    },
+    {
+      "name": "number card of profit",
+      "type": "number",
+      "x_axis": "Order ID",
+      "y_axis": "Profit",
+      "filter_column": null,
+      "filter_values": [],
+      "aggregation": "min",
+      "color": "#9b59b6"
+    },
+    {
+      "name": "Graph 6",
+      "type": "joint-bar",
+      "x_axis": "State",
+      "y_axis": "Ship Mode",
+      "filter_column": "State",
+      "filter_values": [
+        "Stockholm",
+        "England",
+        "Auvergne-Rh\u00f4ne-Alpes",
+        "Provence-Alpes-C\u00f4te d'Azur"
+      ],
+      "aggregation": null,
+      "color": "#1abc9c"
+    }
+  ]
+}
+2025-03-01 23:32:47,007 INFO: Dashboard saved successfully with ID: 13
+2025-03-01 23:32:47,009 INFO: 127.0.0.1 - - [01/Mar/2025 23:32:47] "POST /save_dashboard HTTP/1.1" 200 -
+2025-03-01 23:32:48,444 INFO: 127.0.0.1 - - [01/Mar/2025 23:32:48] "GET /view_dashboard/13 HTTP/1.1" 200 -
+2025-03-01 23:32:48,479 INFO: 127.0.0.1 - - [01/Mar/2025 23:32:48] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-01 23:32:48,481 INFO: 127.0.0.1 - - [01/Mar/2025 23:32:48] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-01 23:32:49,821 ERROR: Error in get_dashboard_data: Object of type int64 is not JSON serializable
+2025-03-01 23:32:49,822 INFO: 127.0.0.1 - - [01/Mar/2025 23:32:49] "[35m[1mGET /get_dashboard_data/13 HTTP/1.1[0m" 500 -
+2025-03-01 23:33:02,331 INFO: 127.0.0.1 - - [01/Mar/2025 23:33:02] "POST /create HTTP/1.1" 200 -
+2025-03-01 23:33:02,355 INFO: 127.0.0.1 - - [01/Mar/2025 23:33:02] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-01 23:33:02,367 INFO: 127.0.0.1 - - [01/Mar/2025 23:33:02] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-01 23:33:03,649 INFO: 127.0.0.1 - - [01/Mar/2025 23:33:03] "POST /get_columns HTTP/1.1" 200 -
+2025-03-01 23:34:04,797 DEBUG: Received dashboard data: {
+  "dashboard_name": "sales db",
+  "sheet_name": "List of Orders",
+  "theme": "light",
+  "graphs": [
+    {
+      "name": "Graph 1",
+      "type": "number",
+      "x_axis": "Order ID",
+      "y_axis": "Profit",
+      "filter_column": null,
+      "filter_values": [],
+      "aggregation": "avg",
+      "color": "#3498db"
+    },
+    {
+      "name": "Graph 2",
+      "type": "gauge",
+      "x_axis": "Order ID",
+      "y_axis": "Sales",
+      "filter_column": null,
+      "filter_values": [],
+      "aggregation": "min",
+      "color": "#2ecc71"
+    }
+  ]
+}
+2025-03-01 23:34:04,808 INFO: Dashboard saved successfully with ID: 14
+2025-03-01 23:34:04,810 INFO: 127.0.0.1 - - [01/Mar/2025 23:34:04] "POST /save_dashboard HTTP/1.1" 200 -
+2025-03-01 23:34:06,197 INFO: 127.0.0.1 - - [01/Mar/2025 23:34:06] "GET /view_dashboard/14 HTTP/1.1" 200 -
+2025-03-01 23:34:06,227 INFO: 127.0.0.1 - - [01/Mar/2025 23:34:06] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-01 23:34:06,229 INFO: 127.0.0.1 - - [01/Mar/2025 23:34:06] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-01 23:34:07,576 INFO: 127.0.0.1 - - [01/Mar/2025 23:34:07] "GET /get_dashboard_data/14 HTTP/1.1" 200 -
+2025-03-01 23:34:16,464 INFO: 127.0.0.1 - - [01/Mar/2025 23:34:16] "POST /create HTTP/1.1" 200 -
+2025-03-01 23:34:16,497 INFO: 127.0.0.1 - - [01/Mar/2025 23:34:16] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-01 23:34:16,499 INFO: 127.0.0.1 - - [01/Mar/2025 23:34:16] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-01 23:34:17,726 INFO: 127.0.0.1 - - [01/Mar/2025 23:34:17] "POST /get_columns HTTP/1.1" 200 -
+2025-03-01 23:34:58,513 INFO: 127.0.0.1 - - [01/Mar/2025 23:34:58] "POST /get_column_values HTTP/1.1" 200 -
+2025-03-01 23:36:02,080 INFO: 127.0.0.1 - - [01/Mar/2025 23:36:02] "POST /get_column_values HTTP/1.1" 200 -
+2025-03-01 23:36:27,236 INFO: 127.0.0.1 - - [01/Mar/2025 23:36:27] "POST /get_column_values HTTP/1.1" 200 -
+2025-03-01 23:37:00,545 INFO: 127.0.0.1 - - [01/Mar/2025 23:37:00] "POST /get_column_values HTTP/1.1" 200 -
+2025-03-01 23:37:26,335 INFO: 127.0.0.1 - - [01/Mar/2025 23:37:26] "POST /get_column_values HTTP/1.1" 200 -
+2025-03-01 23:38:20,016 DEBUG: Received dashboard data: {
+  "dashboard_name": "sales db",
+  "sheet_name": "List of Orders",
+  "theme": "dark",
+  "graphs": [
+    {
+      "name": "country - sales",
+      "type": "bar",
+      "x_axis": "Country",
+      "y_axis": "Sales",
+      "filter_column": "Country",
+      "filter_values": [
+        "Sweden",
+        "United Kingdom",
+        "France",
+        "Italy"
+      ],
+      "aggregation": null,
+      "color": "#3498db"
+    },
+    {
+      "name": "Graph 2",
+      "type": "pie",
+      "x_axis": "Sub-Category",
+      "y_axis": "Sales",
+      "filter_column": "Sub-Category",
+      "filter_values": [
+        "Paper",
+        "Bookcases",
+        "Art",
+        "Binders"
+      ],
+      "aggregation": null,
+      "color": "#2ecc71"
+    },
+    {
+      "name": "Graph 3",
+      "type": "line",
+      "x_axis": "City",
+      "y_axis": "Sales",
+      "filter_column": "City",
+      "filter_values": [
+        "Stockholm",
+        "Southport",
+        "Valence",
+        "Birmingham"
+      ],
+      "aggregation": null,
+      "color": "#e74c3c"
+    },
+    {
+      "name": "Graph 4",
+      "type": "number",
+      "x_axis": "Order ID",
+      "y_axis": "Sales",
+      "filter_column": null,
+      "filter_values": [],
+      "aggregation": null,
+      "color": "#f39c12"
+    },
+    {
+      "name": "Graph 5",
+      "type": "gauge",
+      "x_axis": "Order ID",
+      "y_axis": "Order ID",
+      "filter_column": "Profit",
+      "filter_values": [],
+      "aggregation": null,
+      "color": "#9b59b6"
+    },
+    {
+      "name": "Graph 6",
+      "type": "donut",
+      "x_axis": "Product Name",
+      "y_axis": "Cost",
+      "filter_column": "Product Name",
+      "filter_values": [
+        "Enermax Note Cards, Premium",
+        "Dania Corner Shelving, Traditional",
+        "Binney & Smith Sketch Pad, Easy-Erase",
+        "Boston Markers, Easy-Erase"
+      ],
+      "aggregation": null,
+      "color": "#1abc9c"
+    }
+  ]
+}
+2025-03-01 23:38:20,032 INFO: Dashboard saved successfully with ID: 15
+2025-03-01 23:38:20,033 INFO: 127.0.0.1 - - [01/Mar/2025 23:38:20] "POST /save_dashboard HTTP/1.1" 200 -
+2025-03-01 23:38:22,068 INFO: 127.0.0.1 - - [01/Mar/2025 23:38:22] "GET /view_dashboard/15 HTTP/1.1" 200 -
+2025-03-01 23:38:22,124 INFO: 127.0.0.1 - - [01/Mar/2025 23:38:22] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-01 23:38:22,126 INFO: 127.0.0.1 - - [01/Mar/2025 23:38:22] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-01 23:38:23,463 ERROR: Error in get_dashboard_data: Object of type int64 is not JSON serializable
+2025-03-01 23:38:23,464 INFO: 127.0.0.1 - - [01/Mar/2025 23:38:23] "[35m[1mGET /get_dashboard_data/15 HTTP/1.1[0m" 500 -
+2025-03-01 23:38:43,395 INFO: 127.0.0.1 - - [01/Mar/2025 23:38:43] "POST /create HTTP/1.1" 200 -
+2025-03-01 23:38:43,430 INFO: 127.0.0.1 - - [01/Mar/2025 23:38:43] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-01 23:38:43,433 INFO: 127.0.0.1 - - [01/Mar/2025 23:38:43] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-01 23:38:44,751 INFO: 127.0.0.1 - - [01/Mar/2025 23:38:44] "POST /get_columns HTTP/1.1" 200 -
+2025-03-01 23:39:08,989 INFO: 127.0.0.1 - - [01/Mar/2025 23:39:08] "POST /get_column_values HTTP/1.1" 200 -
+2025-03-01 23:39:30,336 INFO: 127.0.0.1 - - [01/Mar/2025 23:39:30] "POST /get_column_values HTTP/1.1" 200 -
+2025-03-01 23:39:51,998 DEBUG: Received dashboard data: {
+  "dashboard_name": "sales db",
+  "sheet_name": "List of Orders",
+  "theme": "light",
+  "graphs": [
+    {
+      "name": "Graph 1",
+      "type": "number",
+      "x_axis": "Order ID",
+      "y_axis": "Sales",
+      "filter_column": null,
+      "filter_values": [],
+      "aggregation": "min",
+      "color": "#3498db"
+    },
+    {
+      "name": "Graph 2",
+      "type": "bar",
+      "x_axis": "Country",
+      "y_axis": "Sales",
+      "filter_column": "Country",
+      "filter_values": [
+        "Sweden",
+        "United Kingdom",
+        "France",
+        "Italy"
+      ],
+      "aggregation": null,
+      "color": "#2ecc71"
+    },
+    {
+      "name": "Graph 3",
+      "type": "pie",
+      "x_axis": "Sub-Category",
+      "y_axis": "Profit",
+      "filter_column": "Sub-Category",
+      "filter_values": [
+        "Paper",
+        "Bookcases",
+        "Art",
+        "Binders"
+      ],
+      "aggregation": null,
+      "color": "#e74c3c"
+    },
+    {
+      "name": "Graph 4",
+      "type": "gauge",
+      "x_axis": "Order ID",
+      "y_axis": "Profit",
+      "filter_column": null,
+      "filter_values": [],
+      "aggregation": "avg",
+      "color": "#f39c12"
+    }
+  ]
+}
+2025-03-01 23:39:52,017 INFO: Dashboard saved successfully with ID: 16
+2025-03-01 23:39:52,018 INFO: 127.0.0.1 - - [01/Mar/2025 23:39:52] "POST /save_dashboard HTTP/1.1" 200 -
+2025-03-01 23:39:53,433 INFO: 127.0.0.1 - - [01/Mar/2025 23:39:53] "GET /view_dashboard/16 HTTP/1.1" 200 -
+2025-03-01 23:39:53,456 INFO: 127.0.0.1 - - [01/Mar/2025 23:39:53] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-01 23:39:53,457 INFO: 127.0.0.1 - - [01/Mar/2025 23:39:53] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-01 23:39:54,806 ERROR: Error in get_dashboard_data: Object of type int64 is not JSON serializable
+2025-03-01 23:39:54,807 INFO: 127.0.0.1 - - [01/Mar/2025 23:39:54] "[35m[1mGET /get_dashboard_data/16 HTTP/1.1[0m" 500 -
+2025-03-01 23:41:36,191 INFO: 127.0.0.1 - - [01/Mar/2025 23:41:36] "POST /create HTTP/1.1" 200 -
+2025-03-01 23:41:36,227 INFO: 127.0.0.1 - - [01/Mar/2025 23:41:36] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-01 23:41:36,228 INFO: 127.0.0.1 - - [01/Mar/2025 23:41:36] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-01 23:41:37,599 INFO: 127.0.0.1 - - [01/Mar/2025 23:41:37] "POST /get_columns HTTP/1.1" 200 -
+2025-03-01 23:41:55,094 INFO: 127.0.0.1 - - [01/Mar/2025 23:41:55] "POST /get_column_values HTTP/1.1" 200 -
+2025-03-01 23:42:21,006 INFO: 127.0.0.1 - - [01/Mar/2025 23:42:21] "POST /get_column_values HTTP/1.1" 200 -
+2025-03-01 23:42:49,662 INFO: 127.0.0.1 - - [01/Mar/2025 23:42:49] "POST /get_column_values HTTP/1.1" 200 -
+2025-03-01 23:43:07,631 DEBUG: Received dashboard data: {
+  "dashboard_name": "power bi",
+  "sheet_name": "List of Orders",
+  "theme": "light",
+  "graphs": [
+    {
+      "name": "Graph 1",
+      "type": "bar",
+      "x_axis": "Country",
+      "y_axis": "Sales",
+      "filter_column": "Country",
+      "filter_values": [
+        "Sweden",
+        "United Kingdom",
+        "France",
+        "Italy"
+      ],
+      "aggregation": null,
+      "color": "#3498db"
+    },
+    {
+      "name": "Graph 2",
+      "type": "line",
+      "x_axis": "Sub-Category",
+      "y_axis": "Sales",
+      "filter_column": "Sub-Category",
+      "filter_values": [
+        "Bookcases",
+        "Art",
+        "Binders",
+        "Tables"
+      ],
+      "aggregation": null,
+      "color": "#2ecc71"
+    },
+    {
+      "name": "Graph 3",
+      "type": "pie",
+      "x_axis": "Region",
+      "y_axis": "Profit",
+      "filter_column": "Region",
+      "filter_values": [],
+      "aggregation": null,
+      "color": "#e74c3c"
+    },
+    {
+      "name": "Graph 4",
+      "type": "number",
+      "x_axis": "Order ID",
+      "y_axis": "Profit",
+      "filter_column": null,
+      "filter_values": [],
+      "aggregation": null,
+      "color": "#f39c12"
+    }
+  ]
+}
+2025-03-01 23:43:07,649 INFO: Dashboard saved successfully with ID: 17
+2025-03-01 23:43:07,650 INFO: 127.0.0.1 - - [01/Mar/2025 23:43:07] "POST /save_dashboard HTTP/1.1" 200 -
+2025-03-01 23:43:09,193 INFO: 127.0.0.1 - - [01/Mar/2025 23:43:09] "GET /view_dashboard/17 HTTP/1.1" 200 -
+2025-03-01 23:43:09,214 INFO: 127.0.0.1 - - [01/Mar/2025 23:43:09] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-01 23:43:09,216 INFO: 127.0.0.1 - - [01/Mar/2025 23:43:09] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-01 23:43:10,519 ERROR: Error in get_dashboard_data: Object of type int64 is not JSON serializable
+2025-03-01 23:43:10,521 INFO: 127.0.0.1 - - [01/Mar/2025 23:43:10] "[35m[1mGET /get_dashboard_data/17 HTTP/1.1[0m" 500 -
+2025-03-01 23:45:20,792 INFO: 127.0.0.1 - - [01/Mar/2025 23:45:20] "POST /create HTTP/1.1" 200 -
+2025-03-01 23:45:20,822 INFO: 127.0.0.1 - - [01/Mar/2025 23:45:20] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-01 23:45:20,823 INFO: 127.0.0.1 - - [01/Mar/2025 23:45:20] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-01 23:45:22,380 INFO: 127.0.0.1 - - [01/Mar/2025 23:45:22] "POST /get_columns HTTP/1.1" 200 -
+2025-03-01 23:46:00,201 INFO: 127.0.0.1 - - [01/Mar/2025 23:46:00] "POST /get_column_values HTTP/1.1" 200 -
+2025-03-01 23:46:27,132 INFO: 127.0.0.1 - - [01/Mar/2025 23:46:27] "POST /get_column_values HTTP/1.1" 200 -
+2025-03-01 23:46:55,824 INFO: 127.0.0.1 - - [01/Mar/2025 23:46:55] "POST /get_column_values HTTP/1.1" 200 -
+2025-03-01 23:47:24,878 INFO: 127.0.0.1 - - [01/Mar/2025 23:47:24] "POST /get_column_values HTTP/1.1" 200 -
+2025-03-01 23:47:33,327 DEBUG: Received dashboard data: {
+  "dashboard_name": "sales db",
+  "sheet_name": "List of Orders",
+  "theme": "light",
+  "graphs": [
+    {
+      "name": "Graph 1",
+      "type": "bar",
+      "x_axis": "Country",
+      "y_axis": "Sales",
+      "filter_column": "Country",
+      "filter_values": [
+        "Sweden",
+        "United Kingdom",
+        "France"
+      ],
+      "aggregation": null,
+      "color": "#3498db"
+    },
+    {
+      "name": "Graph 2",
+      "type": "line",
+      "x_axis": "Sub-Category",
+      "y_axis": "Profit",
+      "filter_column": "Sub-Category",
+      "filter_values": [
+        "Paper",
+        "Bookcases",
+        "Art"
+      ],
+      "aggregation": null,
+      "color": "#2ecc71"
+    },
+    {
+      "name": "Graph 3",
+      "type": "pie",
+      "x_axis": "Product Name",
+      "y_axis": "Sales",
+      "filter_column": "Product Name",
+      "filter_values": [
+        "Enermax Note Cards, Premium",
+        "Dania Corner Shelving, Traditional",
+        "Binney & Smith Sketch Pad, Easy-Erase",
+        "Boston Markers, Easy-Erase"
+      ],
+      "aggregation": null,
+      "color": "#e74c3c"
+    },
+    {
+      "name": "Graph 4",
+      "type": "scatter",
+      "x_axis": "City",
+      "y_axis": "Profit",
+      "filter_column": "City",
+      "filter_values": [
+        "Stockholm",
+        "Southport",
+        "Valence",
+        "Birmingham"
+      ],
+      "aggregation": null,
+      "color": "#f39c12"
+    }
+  ]
+}
+2025-03-01 23:47:33,345 INFO: Dashboard saved successfully with ID: 18
+2025-03-01 23:47:33,347 INFO: 127.0.0.1 - - [01/Mar/2025 23:47:33] "POST /save_dashboard HTTP/1.1" 200 -
+2025-03-01 23:47:34,921 INFO: 127.0.0.1 - - [01/Mar/2025 23:47:34] "GET /view_dashboard/18 HTTP/1.1" 200 -
+2025-03-01 23:47:34,983 INFO: 127.0.0.1 - - [01/Mar/2025 23:47:34] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-01 23:47:34,984 INFO: 127.0.0.1 - - [01/Mar/2025 23:47:34] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-01 23:47:36,548 INFO: 127.0.0.1 - - [01/Mar/2025 23:47:36] "GET /get_dashboard_data/18 HTTP/1.1" 200 -
+2025-03-01 23:49:33,522 INFO: 127.0.0.1 - - [01/Mar/2025 23:49:33] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-01 23:49:46,140 INFO: 127.0.0.1 - - [01/Mar/2025 23:49:46] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-01 23:50:08,646 INFO: 127.0.0.1 - - [01/Mar/2025 23:50:08] "GET /create HTTP/1.1" 200 -
+2025-03-01 23:50:11,963 INFO: 127.0.0.1 - - [01/Mar/2025 23:50:11] "GET /dashboard HTTP/1.1" 200 -
+2025-03-01 23:50:11,996 INFO: 127.0.0.1 - - [01/Mar/2025 23:50:11] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-01 23:50:11,998 INFO: 127.0.0.1 - - [01/Mar/2025 23:50:11] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-01 23:50:15,274 INFO: 127.0.0.1 - - [01/Mar/2025 23:50:15] "POST /delete_dashboard/18 HTTP/1.1" 200 -
+2025-03-01 23:50:17,925 INFO: 127.0.0.1 - - [01/Mar/2025 23:50:17] "POST /delete_dashboard/16 HTTP/1.1" 200 -
+2025-03-01 23:50:20,745 INFO: 127.0.0.1 - - [01/Mar/2025 23:50:20] "POST /delete_dashboard/14 HTTP/1.1" 200 -
+2025-03-01 23:50:23,412 INFO: 127.0.0.1 - - [01/Mar/2025 23:50:23] "POST /delete_dashboard/15 HTTP/1.1" 200 -
+2025-03-01 23:50:26,071 INFO: 127.0.0.1 - - [01/Mar/2025 23:50:26] "POST /delete_dashboard/17 HTTP/1.1" 200 -
+2025-03-01 23:50:28,315 INFO: 127.0.0.1 - - [01/Mar/2025 23:50:28] "POST /delete_dashboard/12 HTTP/1.1" 200 -
+2025-03-01 23:52:47,149 INFO:  * Detected change in 'D:\\powerbi-dashboard-project\\app.py', reloading
+2025-03-01 23:52:47,152 INFO:  * Detected change in 'D:\\powerbi-dashboard-project\\app.py', reloading
+2025-03-01 23:52:47,154 INFO:  * Detected change in 'D:\\powerbi-dashboard-project\\app.py', reloading
+2025-03-01 23:52:47,739 INFO:  * Detected change in 'C:\\Users\\moins\\AppData\\Roaming\\Python\\Python312\\site-packages\\numpy\\_typing\\_nbit_base.py', reloading
+2025-03-01 23:52:47,757 INFO:  * Detected change in 'C:\\Users\\moins\\AppData\\Roaming\\Python\\Python312\\site-packages\\numpy\\_utils\\__init__.py', reloading
+2025-03-01 23:52:49,451 WARNING:  * Debugger is active!
+2025-03-01 23:52:49,455 INFO:  * Debugger PIN: 125-033-740
+2025-03-01 23:53:09,503 INFO: 127.0.0.1 - - [01/Mar/2025 23:53:09] "GET /dashboard HTTP/1.1" 200 -
+2025-03-01 23:53:09,678 INFO: 127.0.0.1 - - [01/Mar/2025 23:53:09] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-01 23:53:09,678 INFO: 127.0.0.1 - - [01/Mar/2025 23:53:09] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-01 23:53:11,541 INFO: 127.0.0.1 - - [01/Mar/2025 23:53:11] "GET /create HTTP/1.1" 200 -
+2025-03-01 23:53:11,580 INFO: 127.0.0.1 - - [01/Mar/2025 23:53:11] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-01 23:53:11,581 INFO: 127.0.0.1 - - [01/Mar/2025 23:53:11] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-01 23:53:19,696 INFO: 127.0.0.1 - - [01/Mar/2025 23:53:19] "POST /create HTTP/1.1" 200 -
+2025-03-01 23:53:19,720 INFO: 127.0.0.1 - - [01/Mar/2025 23:53:19] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-01 23:53:19,722 INFO: 127.0.0.1 - - [01/Mar/2025 23:53:19] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-01 23:53:20,963 INFO: 127.0.0.1 - - [01/Mar/2025 23:53:20] "POST /get_columns HTTP/1.1" 200 -
+2025-03-01 23:53:37,318 DEBUG: Received dashboard data: {
+  "dashboard_name": "power bi",
+  "sheet_name": "List of Orders",
+  "theme": "dark",
+  "graphs": [
+    {
+      "name": "Graph 1",
+      "type": "bar",
+      "x_axis": "Category",
+      "y_axis": "Sales",
+      "filter_column": null,
+      "filter_values": [],
+      "aggregation": null,
+      "color": "#3498db"
+    }
+  ]
+}
+2025-03-01 23:53:37,334 INFO: Dashboard saved successfully with ID: 19
+2025-03-01 23:53:37,336 INFO: 127.0.0.1 - - [01/Mar/2025 23:53:37] "POST /save_dashboard HTTP/1.1" 200 -
+2025-03-01 23:53:38,822 INFO: 127.0.0.1 - - [01/Mar/2025 23:53:38] "GET /view_dashboard/19 HTTP/1.1" 200 -
+2025-03-01 23:53:38,842 INFO: 127.0.0.1 - - [01/Mar/2025 23:53:38] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-01 23:53:38,843 INFO: 127.0.0.1 - - [01/Mar/2025 23:53:38] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-01 23:53:40,130 INFO: 127.0.0.1 - - [01/Mar/2025 23:53:40] "GET /get_dashboard_data/19 HTTP/1.1" 200 -
+2025-03-01 23:53:48,114 INFO: 127.0.0.1 - - [01/Mar/2025 23:53:48] "POST /create HTTP/1.1" 200 -
+2025-03-01 23:53:48,150 INFO: 127.0.0.1 - - [01/Mar/2025 23:53:48] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-01 23:53:48,152 INFO: 127.0.0.1 - - [01/Mar/2025 23:53:48] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-01 23:53:49,374 INFO: 127.0.0.1 - - [01/Mar/2025 23:53:49] "POST /get_columns HTTP/1.1" 200 -
+2025-03-01 23:54:26,345 INFO: 127.0.0.1 - - [01/Mar/2025 23:54:26] "POST /get_column_values HTTP/1.1" 200 -
+2025-03-01 23:54:33,666 DEBUG: Received dashboard data: {
+  "dashboard_name": "power bi",
+  "sheet_name": "List of Orders",
+  "theme": "light",
+  "graphs": [
+    {
+      "name": "Graph 1",
+      "type": "number",
+      "x_axis": "Order ID",
+      "y_axis": "Sales",
+      "filter_column": null,
+      "filter_values": [],
+      "aggregation": "avg",
+      "color": "#3498db"
+    },
+    {
+      "name": "Graph 2",
+      "type": "bar",
+      "x_axis": "Country",
+      "y_axis": "Profit",
+      "filter_column": "Country",
+      "filter_values": [
+        "Sweden",
+        "United Kingdom",
+        "France",
+        "Italy"
+      ],
+      "aggregation": null,
+      "color": "#2ecc71"
+    }
+  ]
+}
+2025-03-01 23:54:33,677 INFO: Dashboard saved successfully with ID: 20
+2025-03-01 23:54:33,678 INFO: 127.0.0.1 - - [01/Mar/2025 23:54:33] "POST /save_dashboard HTTP/1.1" 200 -
+2025-03-01 23:54:35,233 INFO: 127.0.0.1 - - [01/Mar/2025 23:54:35] "GET /view_dashboard/20 HTTP/1.1" 200 -
+2025-03-01 23:54:35,261 INFO: 127.0.0.1 - - [01/Mar/2025 23:54:35] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-01 23:54:35,263 INFO: 127.0.0.1 - - [01/Mar/2025 23:54:35] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-01 23:54:36,548 INFO: 127.0.0.1 - - [01/Mar/2025 23:54:36] "GET /get_dashboard_data/20 HTTP/1.1" 200 -
+2025-03-01 23:54:52,302 INFO: 127.0.0.1 - - [01/Mar/2025 23:54:52] "POST /create HTTP/1.1" 200 -
+2025-03-01 23:54:52,326 INFO: 127.0.0.1 - - [01/Mar/2025 23:54:52] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-01 23:54:52,327 INFO: 127.0.0.1 - - [01/Mar/2025 23:54:52] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-01 23:54:53,601 INFO: 127.0.0.1 - - [01/Mar/2025 23:54:53] "POST /get_columns HTTP/1.1" 200 -
+2025-03-01 23:56:01,612 INFO: 127.0.0.1 - - [01/Mar/2025 23:56:01] "POST /get_column_values HTTP/1.1" 200 -
+2025-03-01 23:56:34,233 INFO: 127.0.0.1 - - [01/Mar/2025 23:56:34] "POST /get_column_values HTTP/1.1" 200 -
+2025-03-01 23:56:54,656 INFO: 127.0.0.1 - - [01/Mar/2025 23:56:54] "POST /get_column_values HTTP/1.1" 200 -
+2025-03-01 23:58:21,483 INFO: 127.0.0.1 - - [01/Mar/2025 23:58:21] "POST /get_column_values HTTP/1.1" 200 -
+2025-03-01 23:58:34,345 INFO: 127.0.0.1 - - [01/Mar/2025 23:58:34] "POST /get_column_values HTTP/1.1" 200 -
+2025-03-01 23:58:46,248 DEBUG: Received dashboard data: {
+  "dashboard_name": "sales db",
+  "sheet_name": "List of Orders",
+  "theme": "light",
+  "graphs": [
+    {
+      "name": "average sales",
+      "type": "number",
+      "x_axis": "Order ID",
+      "y_axis": "Sales",
+      "filter_column": null,
+      "filter_values": [],
+      "aggregation": "avg",
+      "color": "#3498db"
+    },
+    {
+      "name": "minimum profit",
+      "type": "gauge",
+      "x_axis": "Order ID",
+      "y_axis": "Profit",
+      "filter_column": null,
+      "filter_values": [],
+      "aggregation": "min",
+      "color": "#2ecc71"
+    },
+    {
+      "name": "sales based on country",
+      "type": "bar",
+      "x_axis": "Country",
+      "y_axis": "Sales",
+      "filter_column": "Country",
+      "filter_values": [
+        "Sweden",
+        "France",
+        "Italy",
+        "Austria"
+      ],
+      "aggregation": null,
+      "color": "#e74c3c"
+    },
+    {
+      "name": "Profit of products",
+      "type": "pie",
+      "x_axis": "Sub-Category",
+      "y_axis": "Profit",
+      "filter_column": "Sub-Category",
+      "filter_values": [
+        "Paper",
+        "Bookcases",
+        "Art",
+        "Chairs"
+      ],
+      "aggregation": null,
+      "color": "#f39c12"
+    },
+    {
+      "name": "sales based on city",
+      "type": "line",
+      "x_axis": "City",
+      "y_axis": "Sales",
+      "filter_column": "Sales",
+      "filter_values": [],
+      "aggregation": null,
+      "color": "#9b59b6"
+    },
+    {
+      "name": "profit based on state",
+      "type": "scatter",
+      "x_axis": "State",
+      "y_axis": "Profit",
+      "filter_column": "State",
+      "filter_values": [
+        "Stockholm",
+        "England",
+        "Vienna",
+        "Murcia"
+      ],
+      "aggregation": null,
+      "color": "#1abc9c"
+    }
+  ]
+}
+2025-03-01 23:58:46,265 INFO: Dashboard saved successfully with ID: 21
+2025-03-01 23:58:46,266 INFO: 127.0.0.1 - - [01/Mar/2025 23:58:46] "POST /save_dashboard HTTP/1.1" 200 -
+2025-03-01 23:58:48,076 INFO: 127.0.0.1 - - [01/Mar/2025 23:58:48] "GET /view_dashboard/21 HTTP/1.1" 200 -
+2025-03-01 23:58:48,110 INFO: 127.0.0.1 - - [01/Mar/2025 23:58:48] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-01 23:58:48,112 INFO: 127.0.0.1 - - [01/Mar/2025 23:58:48] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-01 23:58:49,479 INFO: 127.0.0.1 - - [01/Mar/2025 23:58:49] "GET /get_dashboard_data/21 HTTP/1.1" 200 -
+2025-03-01 23:59:42,861 INFO: 127.0.0.1 - - [01/Mar/2025 23:59:42] "GET /dashboard HTTP/1.1" 200 -
+2025-03-01 23:59:42,894 INFO: 127.0.0.1 - - [01/Mar/2025 23:59:42] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-01 23:59:42,895 INFO: 127.0.0.1 - - [01/Mar/2025 23:59:42] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-01 23:59:48,061 INFO: 127.0.0.1 - - [01/Mar/2025 23:59:48] "GET /view_dashboard/11 HTTP/1.1" 200 -
+2025-03-01 23:59:48,093 INFO: 127.0.0.1 - - [01/Mar/2025 23:59:48] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-01 23:59:48,093 INFO: 127.0.0.1 - - [01/Mar/2025 23:59:48] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-01 23:59:49,417 INFO: 127.0.0.1 - - [01/Mar/2025 23:59:49] "GET /get_dashboard_data/11 HTTP/1.1" 200 -
+2025-03-01 23:59:54,889 INFO: 127.0.0.1 - - [01/Mar/2025 23:59:54] "GET /view_dashboard/21 HTTP/1.1" 200 -
+2025-03-01 23:59:54,928 INFO: 127.0.0.1 - - [01/Mar/2025 23:59:54] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-01 23:59:54,929 INFO: 127.0.0.1 - - [01/Mar/2025 23:59:54] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-01 23:59:56,296 INFO: 127.0.0.1 - - [01/Mar/2025 23:59:56] "GET /get_dashboard_data/21 HTTP/1.1" 200 -
+2025-03-02 00:00:02,398 INFO: 127.0.0.1 - - [02/Mar/2025 00:00:02] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-03-02 00:00:02,412 INFO: 127.0.0.1 - - [02/Mar/2025 00:00:02] "GET / HTTP/1.1" 200 -
+2025-03-02 00:00:02,459 INFO: 127.0.0.1 - - [02/Mar/2025 00:00:02] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-02 00:00:02,468 INFO: 127.0.0.1 - - [02/Mar/2025 00:00:02] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-02 00:00:04,483 INFO: 127.0.0.1 - - [02/Mar/2025 00:00:04] "GET /login HTTP/1.1" 200 -
+2025-03-02 00:00:04,529 INFO: 127.0.0.1 - - [02/Mar/2025 00:00:04] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-02 00:00:04,530 INFO: 127.0.0.1 - - [02/Mar/2025 00:00:04] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-02 00:00:15,541 INFO: 127.0.0.1 - - [02/Mar/2025 00:00:15] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-03-02 00:00:15,553 INFO: 127.0.0.1 - - [02/Mar/2025 00:00:15] "GET /dashboard HTTP/1.1" 200 -
+2025-03-02 00:00:15,601 INFO: 127.0.0.1 - - [02/Mar/2025 00:00:15] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-02 00:00:15,602 INFO: 127.0.0.1 - - [02/Mar/2025 00:00:15] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-02 00:00:18,897 INFO: 127.0.0.1 - - [02/Mar/2025 00:00:18] "GET /create HTTP/1.1" 200 -
+2025-03-02 00:00:18,937 INFO: 127.0.0.1 - - [02/Mar/2025 00:00:18] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-02 00:00:18,938 INFO: 127.0.0.1 - - [02/Mar/2025 00:00:18] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-02 00:00:30,080 INFO: 127.0.0.1 - - [02/Mar/2025 00:00:30] "POST /create HTTP/1.1" 200 -
+2025-03-02 00:00:30,105 INFO: 127.0.0.1 - - [02/Mar/2025 00:00:30] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-02 00:00:30,116 INFO: 127.0.0.1 - - [02/Mar/2025 00:00:30] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-02 00:00:31,660 INFO: 127.0.0.1 - - [02/Mar/2025 00:00:31] "POST /get_columns HTTP/1.1" 200 -
+2025-03-02 00:00:54,495 DEBUG: Received dashboard data: {
+  "dashboard_name": "sales db",
+  "sheet_name": "List of Orders",
+  "theme": "light",
+  "graphs": [
+    {
+      "name": "Graph 1",
+      "type": "bar",
+      "x_axis": "Category",
+      "y_axis": "Sales",
+      "filter_column": null,
+      "filter_values": [],
+      "aggregation": null,
+      "color": "#3498db"
+    }
+  ]
+}
+2025-03-02 00:00:54,517 INFO: Dashboard saved successfully with ID: 22
+2025-03-02 00:00:54,518 INFO: 127.0.0.1 - - [02/Mar/2025 00:00:54] "POST /save_dashboard HTTP/1.1" 200 -
+2025-03-02 00:00:57,271 INFO: 127.0.0.1 - - [02/Mar/2025 00:00:57] "GET /view_dashboard/22 HTTP/1.1" 200 -
+2025-03-02 00:00:57,299 INFO: 127.0.0.1 - - [02/Mar/2025 00:00:57] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-02 00:00:57,301 INFO: 127.0.0.1 - - [02/Mar/2025 00:00:57] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-02 00:00:58,725 INFO: 127.0.0.1 - - [02/Mar/2025 00:00:58] "GET /get_dashboard_data/22 HTTP/1.1" 200 -
+2025-03-02 00:01:11,404 INFO: 127.0.0.1 - - [02/Mar/2025 00:01:11] "GET /create HTTP/1.1" 200 -
+2025-03-02 00:01:13,458 INFO: 127.0.0.1 - - [02/Mar/2025 00:01:13] "GET /dashboard HTTP/1.1" 200 -
+2025-03-02 00:01:13,498 INFO: 127.0.0.1 - - [02/Mar/2025 00:01:13] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-02 00:01:13,499 INFO: 127.0.0.1 - - [02/Mar/2025 00:01:13] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-02 00:01:20,465 INFO: 127.0.0.1 - - [02/Mar/2025 00:01:20] "POST /delete_dashboard/22 HTTP/1.1" 200 -
+2025-03-02 00:01:21,973 INFO: 127.0.0.1 - - [02/Mar/2025 00:01:21] "GET /view_dashboard/21 HTTP/1.1" 200 -
+2025-03-02 00:01:22,009 INFO: 127.0.0.1 - - [02/Mar/2025 00:01:22] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-02 00:01:22,010 INFO: 127.0.0.1 - - [02/Mar/2025 00:01:22] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-02 00:01:23,429 INFO: 127.0.0.1 - - [02/Mar/2025 00:01:23] "GET /get_dashboard_data/21 HTTP/1.1" 200 -
+2025-03-02 00:01:35,005 INFO: 127.0.0.1 - - [02/Mar/2025 00:01:35] "GET /view_dashboard/21 HTTP/1.1" 200 -
+2025-03-02 00:01:35,044 INFO: 127.0.0.1 - - [02/Mar/2025 00:01:35] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-02 00:01:35,045 INFO: 127.0.0.1 - - [02/Mar/2025 00:01:35] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-02 00:01:36,436 INFO: 127.0.0.1 - - [02/Mar/2025 00:01:36] "GET /get_dashboard_data/21 HTTP/1.1" 200 -
+2025-03-02 00:01:43,986 INFO: 127.0.0.1 - - [02/Mar/2025 00:01:43] "POST /delete_dashboard/20 HTTP/1.1" 200 -
+2025-03-02 00:01:46,402 INFO: 127.0.0.1 - - [02/Mar/2025 00:01:46] "POST /delete_dashboard/13 HTTP/1.1" 200 -
+2025-03-02 00:01:48,831 INFO: 127.0.0.1 - - [02/Mar/2025 00:01:48] "POST /delete_dashboard/19 HTTP/1.1" 200 -
+2025-03-02 00:01:51,165 INFO: 127.0.0.1 - - [02/Mar/2025 00:01:51] "POST /delete_dashboard/11 HTTP/1.1" 200 -
+2025-03-02 00:01:52,174 INFO: 127.0.0.1 - - [02/Mar/2025 00:01:52] "GET /create HTTP/1.1" 200 -
+2025-03-02 00:01:52,207 INFO: 127.0.0.1 - - [02/Mar/2025 00:01:52] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-02 00:01:52,214 INFO: 127.0.0.1 - - [02/Mar/2025 00:01:52] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-02 00:01:59,911 INFO: 127.0.0.1 - - [02/Mar/2025 00:01:59] "POST /create HTTP/1.1" 200 -
+2025-03-02 00:01:59,932 INFO: 127.0.0.1 - - [02/Mar/2025 00:01:59] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-02 00:01:59,934 INFO: 127.0.0.1 - - [02/Mar/2025 00:01:59] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-02 00:02:01,207 INFO: 127.0.0.1 - - [02/Mar/2025 00:02:01] "POST /get_columns HTTP/1.1" 200 -
+2025-03-02 00:02:29,603 INFO: 127.0.0.1 - - [02/Mar/2025 00:02:29] "POST /get_column_values HTTP/1.1" 200 -
+2025-03-02 00:02:35,416 DEBUG: Received dashboard data: {
+  "dashboard_name": "dashboard",
+  "sheet_name": "List of Orders",
+  "theme": "light",
+  "graphs": [
+    {
+      "name": "Graph 1",
+      "type": "line",
+      "x_axis": "State",
+      "y_axis": "Profit",
+      "filter_column": "State",
+      "filter_values": [
+        "Stockholm",
+        "England",
+        "Auvergne-Rh\u00f4ne-Alpes"
+      ],
+      "aggregation": null,
+      "color": "#3498db"
+    }
+  ]
+}
+2025-03-02 00:02:35,437 INFO: Dashboard saved successfully with ID: 23
+2025-03-02 00:02:35,439 INFO: 127.0.0.1 - - [02/Mar/2025 00:02:35] "POST /save_dashboard HTTP/1.1" 200 -
+2025-03-02 00:02:36,807 INFO: 127.0.0.1 - - [02/Mar/2025 00:02:36] "GET /view_dashboard/23 HTTP/1.1" 200 -
+2025-03-02 00:02:36,831 INFO: 127.0.0.1 - - [02/Mar/2025 00:02:36] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-02 00:02:36,833 INFO: 127.0.0.1 - - [02/Mar/2025 00:02:36] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-02 00:02:38,143 INFO: 127.0.0.1 - - [02/Mar/2025 00:02:38] "GET /get_dashboard_data/23 HTTP/1.1" 200 -
+2025-03-02 00:02:46,239 INFO: 127.0.0.1 - - [02/Mar/2025 00:02:46] "POST /create HTTP/1.1" 200 -
+2025-03-02 00:02:46,265 INFO: 127.0.0.1 - - [02/Mar/2025 00:02:46] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-02 00:02:46,265 INFO: 127.0.0.1 - - [02/Mar/2025 00:02:46] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-02 00:02:47,553 INFO: 127.0.0.1 - - [02/Mar/2025 00:02:47] "POST /get_columns HTTP/1.1" 200 -
+2025-03-02 00:03:05,910 DEBUG: Received dashboard data: {
+  "dashboard_name": "power bi",
+  "sheet_name": "List of Orders",
+  "theme": "light",
+  "graphs": [
+    {
+      "name": "Graph 1",
+      "type": "distribution",
+      "x_axis": "City",
+      "y_axis": "Order ID",
+      "filter_column": null,
+      "filter_values": [],
+      "aggregation": null,
+      "color": "#3498db"
+    }
+  ]
+}
+2025-03-02 00:03:05,928 INFO: Dashboard saved successfully with ID: 24
+2025-03-02 00:03:05,929 INFO: 127.0.0.1 - - [02/Mar/2025 00:03:05] "POST /save_dashboard HTTP/1.1" 200 -
+2025-03-02 00:03:07,351 INFO: 127.0.0.1 - - [02/Mar/2025 00:03:07] "GET /view_dashboard/24 HTTP/1.1" 200 -
+2025-03-02 00:03:07,376 INFO: 127.0.0.1 - - [02/Mar/2025 00:03:07] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-02 00:03:07,378 INFO: 127.0.0.1 - - [02/Mar/2025 00:03:07] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-02 00:03:08,692 INFO: 127.0.0.1 - - [02/Mar/2025 00:03:08] "GET /get_dashboard_data/24 HTTP/1.1" 200 -
+2025-03-02 00:03:14,084 INFO: 127.0.0.1 - - [02/Mar/2025 00:03:14] "GET /view_dashboard/24 HTTP/1.1" 200 -
+2025-03-02 00:03:14,109 INFO: 127.0.0.1 - - [02/Mar/2025 00:03:14] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-02 00:03:14,111 INFO: 127.0.0.1 - - [02/Mar/2025 00:03:14] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-02 00:03:15,410 INFO: 127.0.0.1 - - [02/Mar/2025 00:03:15] "GET /get_dashboard_data/24 HTTP/1.1" 200 -
+2025-03-02 00:07:25,725 INFO: 127.0.0.1 - - [02/Mar/2025 00:07:25] "GET /view_dashboard/24 HTTP/1.1" 200 -
+2025-03-02 00:07:25,748 INFO: 127.0.0.1 - - [02/Mar/2025 00:07:25] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-02 00:07:25,749 INFO: 127.0.0.1 - - [02/Mar/2025 00:07:25] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-02 00:07:27,136 INFO: 127.0.0.1 - - [02/Mar/2025 00:07:27] "GET /get_dashboard_data/24 HTTP/1.1" 200 -
+2025-03-02 00:07:31,624 INFO: 127.0.0.1 - - [02/Mar/2025 00:07:31] "POST /create HTTP/1.1" 200 -
+2025-03-02 00:07:31,656 INFO: 127.0.0.1 - - [02/Mar/2025 00:07:31] "[33mGET /static/css/style.css HTTP/1.1[0m" 404 -
+2025-03-02 00:07:31,659 INFO: 127.0.0.1 - - [02/Mar/2025 00:07:31] "[33mGET /static/js/main.js HTTP/1.1[0m" 404 -
+2025-03-02 00:07:33,069 INFO: 127.0.0.1 - - [02/Mar/2025 00:07:33] "POST /get_columns HTTP/1.1" 200 -
+2025-03-02 00:08:03,989 INFO: 127.0.0.1 - - [02/Mar/2025 00:08:03] "POST /create HTTP/1.1" 200 -
+2025-03-02 00:08:04,016 INFO: 127.0.0.1 - - [02/Mar/2025 00:08:04] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-02 00:08:04,017 INFO: 127.0.0.1 - - [02/Mar/2025 00:08:04] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-02 00:08:04,424 INFO: 127.0.0.1 - - [02/Mar/2025 00:08:04] "POST /get_columns HTTP/1.1" 200 -
+2025-03-02 00:08:31,447 INFO: 127.0.0.1 - - [02/Mar/2025 00:08:31] "POST /get_column_values HTTP/1.1" 200 -
+2025-03-02 00:13:17,105 INFO:  * Detected change in 'D:\\powerbi-dashboard-project\\app.py', reloading
+2025-03-02 00:13:17,109 INFO:  * Detected change in 'D:\\powerbi-dashboard-project\\app.py', reloading
+2025-03-02 00:13:17,109 INFO:  * Detected change in 'D:\\powerbi-dashboard-project\\app.py', reloading
+2025-03-02 00:13:17,553 INFO:  * Detected change in 'C:\\Users\\moins\\AppData\\Roaming\\Python\\Python312\\site-packages\\numpy\\_typing\\_dtype_like.py', reloading
+2025-03-02 00:13:19,089 WARNING:  * Debugger is active!
+2025-03-02 00:13:19,093 INFO:  * Debugger PIN: 125-033-740
+2025-03-02 00:13:22,482 INFO: 127.0.0.1 - - [02/Mar/2025 00:13:22] "POST /create HTTP/1.1" 200 -
+2025-03-02 00:13:22,504 INFO: 127.0.0.1 - - [02/Mar/2025 00:13:22] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-02 00:13:22,505 INFO: 127.0.0.1 - - [02/Mar/2025 00:13:22] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-02 00:13:23,044 INFO: 127.0.0.1 - - [02/Mar/2025 00:13:23] "POST /get_columns HTTP/1.1" 200 -
+2025-03-02 00:14:15,527 INFO: 127.0.0.1 - - [02/Mar/2025 00:14:15] "POST /create HTTP/1.1" 200 -
+2025-03-02 00:14:15,547 INFO: 127.0.0.1 - - [02/Mar/2025 00:14:15] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-02 00:14:15,548 INFO: 127.0.0.1 - - [02/Mar/2025 00:14:15] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-02 00:14:16,957 INFO: 127.0.0.1 - - [02/Mar/2025 00:14:16] "POST /get_columns HTTP/1.1" 200 -
+2025-03-02 00:14:32,883 DEBUG: Received dashboard data: {
+  "dashboard_name": "sales db",
+  "sheet_name": "List of Orders",
+  "theme": "light",
+  "graphs": [
+    {
+      "name": "Graph 1",
+      "type": "bar",
+      "x_axis": "Category",
+      "y_axis": "Sales",
+      "filter_column": null,
+      "filter_values": [],
+      "aggregation": null,
+      "color": "#3498db"
+    }
+  ]
+}
+2025-03-02 00:14:32,902 INFO: Dashboard saved successfully with ID: 25
+2025-03-02 00:14:32,903 INFO: 127.0.0.1 - - [02/Mar/2025 00:14:32] "POST /save_dashboard HTTP/1.1" 200 -
+2025-03-02 00:14:34,343 INFO: 127.0.0.1 - - [02/Mar/2025 00:14:34] "GET /view_dashboard/25 HTTP/1.1" 200 -
+2025-03-02 00:14:34,367 INFO: 127.0.0.1 - - [02/Mar/2025 00:14:34] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-02 00:14:34,372 INFO: 127.0.0.1 - - [02/Mar/2025 00:14:34] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-02 00:14:35,680 INFO: 127.0.0.1 - - [02/Mar/2025 00:14:35] "GET /get_dashboard_data/25 HTTP/1.1" 200 -
+2025-03-02 00:14:40,052 INFO: 127.0.0.1 - - [02/Mar/2025 00:14:40] "GET /create HTTP/1.1" 200 -
+2025-03-02 00:15:20,678 INFO: 127.0.0.1 - - [02/Mar/2025 00:15:20] "GET /dashboard HTTP/1.1" 200 -
+2025-03-02 00:15:20,711 INFO: 127.0.0.1 - - [02/Mar/2025 00:15:20] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-02 00:15:20,713 INFO: 127.0.0.1 - - [02/Mar/2025 00:15:20] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-02 00:15:22,329 INFO: 127.0.0.1 - - [02/Mar/2025 00:15:22] "GET /view_dashboard/21 HTTP/1.1" 200 -
+2025-03-02 00:15:22,365 INFO: 127.0.0.1 - - [02/Mar/2025 00:15:22] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-02 00:15:22,367 INFO: 127.0.0.1 - - [02/Mar/2025 00:15:22] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-02 00:15:23,871 INFO: 127.0.0.1 - - [02/Mar/2025 00:15:23] "GET /get_dashboard_data/21 HTTP/1.1" 200 -
+2025-03-02 00:15:29,110 INFO: 127.0.0.1 - - [02/Mar/2025 00:15:29] "POST /delete_dashboard/25 HTTP/1.1" 200 -
+2025-03-02 00:15:32,396 INFO: 127.0.0.1 - - [02/Mar/2025 00:15:32] "POST /delete_dashboard/24 HTTP/1.1" 200 -
+2025-03-02 00:15:34,917 INFO: 127.0.0.1 - - [02/Mar/2025 00:15:34] "POST /delete_dashboard/23 HTTP/1.1" 200 -
+2025-03-02 00:15:36,029 INFO: 127.0.0.1 - - [02/Mar/2025 00:15:36] "GET /create HTTP/1.1" 200 -
+2025-03-02 00:15:36,060 INFO: 127.0.0.1 - - [02/Mar/2025 00:15:36] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-02 00:15:36,066 INFO: 127.0.0.1 - - [02/Mar/2025 00:15:36] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-02 00:15:43,199 INFO: 127.0.0.1 - - [02/Mar/2025 00:15:43] "POST /create HTTP/1.1" 200 -
+2025-03-02 00:15:43,225 INFO: 127.0.0.1 - - [02/Mar/2025 00:15:43] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-02 00:15:43,227 INFO: 127.0.0.1 - - [02/Mar/2025 00:15:43] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-02 00:15:44,546 INFO: 127.0.0.1 - - [02/Mar/2025 00:15:44] "POST /get_columns HTTP/1.1" 200 -
+2025-03-02 00:16:54,363 DEBUG: Received dashboard data: {
+  "dashboard_name": "dist",
+  "sheet_name": "List of Orders",
+  "theme": "light",
+  "graphs": [
+    {
+      "name": "Graph 1",
+      "type": "distribution",
+      "x_axis": "Category",
+      "y_axis": "Sales",
+      "filter_column": null,
+      "filter_values": [],
+      "aggregation": null,
+      "color": "#3498db"
+    }
+  ]
+}
+2025-03-02 00:16:54,377 INFO: Dashboard saved successfully with ID: 26
+2025-03-02 00:16:54,379 INFO: 127.0.0.1 - - [02/Mar/2025 00:16:54] "POST /save_dashboard HTTP/1.1" 200 -
+2025-03-02 00:16:55,629 INFO: 127.0.0.1 - - [02/Mar/2025 00:16:55] "GET /view_dashboard/26 HTTP/1.1" 200 -
+2025-03-02 00:16:55,657 INFO: 127.0.0.1 - - [02/Mar/2025 00:16:55] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-02 00:16:55,659 INFO: 127.0.0.1 - - [02/Mar/2025 00:16:55] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-02 00:16:57,041 INFO: 127.0.0.1 - - [02/Mar/2025 00:16:57] "GET /get_dashboard_data/26 HTTP/1.1" 200 -
+2025-03-02 00:17:48,825 INFO: 127.0.0.1 - - [02/Mar/2025 00:17:48] "POST /create HTTP/1.1" 200 -
+2025-03-02 00:17:48,853 INFO: 127.0.0.1 - - [02/Mar/2025 00:17:48] "[33mGET /static/css/style.css HTTP/1.1[0m" 404 -
+2025-03-02 00:17:48,856 INFO: 127.0.0.1 - - [02/Mar/2025 00:17:48] "[33mGET /static/js/main.js HTTP/1.1[0m" 404 -
+2025-03-02 00:17:50,247 INFO: 127.0.0.1 - - [02/Mar/2025 00:17:50] "POST /get_columns HTTP/1.1" 200 -
+2025-03-02 00:18:31,384 INFO: 127.0.0.1 - - [02/Mar/2025 00:18:31] "POST /create HTTP/1.1" 200 -
+2025-03-02 00:18:31,408 INFO: 127.0.0.1 - - [02/Mar/2025 00:18:31] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-02 00:18:31,408 INFO: 127.0.0.1 - - [02/Mar/2025 00:18:31] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-02 00:18:31,922 INFO: 127.0.0.1 - - [02/Mar/2025 00:18:31] "POST /get_columns HTTP/1.1" 200 -
+2025-03-02 00:19:09,728 DEBUG: Received dashboard data: {
+  "dashboard_name": "line",
+  "sheet_name": "List of Orders",
+  "theme": "light",
+  "graphs": [
+    {
+      "name": "Graph 1",
+      "type": "line",
+      "x_axis": "Country",
+      "y_axis": "Sales",
+      "aggregation": "",
+      "color": "#3498db",
+      "filters": []
+    }
+  ]
+}
+2025-03-02 00:19:09,746 INFO: Dashboard saved successfully with ID: 27
+2025-03-02 00:19:09,748 INFO: 127.0.0.1 - - [02/Mar/2025 00:19:09] "POST /save_dashboard HTTP/1.1" 200 -
+2025-03-02 00:19:10,932 INFO: 127.0.0.1 - - [02/Mar/2025 00:19:10] "GET /view_dashboard/27 HTTP/1.1" 200 -
+2025-03-02 00:19:10,960 INFO: 127.0.0.1 - - [02/Mar/2025 00:19:10] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-02 00:19:10,962 INFO: 127.0.0.1 - - [02/Mar/2025 00:19:10] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-02 00:19:12,403 INFO: 127.0.0.1 - - [02/Mar/2025 00:19:12] "GET /get_dashboard_data/27 HTTP/1.1" 200 -
+2025-03-02 00:19:20,234 INFO: 127.0.0.1 - - [02/Mar/2025 00:19:20] "POST /create HTTP/1.1" 200 -
+2025-03-02 00:19:20,256 INFO: 127.0.0.1 - - [02/Mar/2025 00:19:20] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-02 00:19:20,258 INFO: 127.0.0.1 - - [02/Mar/2025 00:19:20] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-02 00:19:21,590 INFO: 127.0.0.1 - - [02/Mar/2025 00:19:21] "POST /get_columns HTTP/1.1" 200 -
+2025-03-02 00:19:48,393 DEBUG: Received dashboard data: {
+  "dashboard_name": "dist",
+  "sheet_name": "List of Orders",
+  "theme": "light",
+  "graphs": [
+    {
+      "name": "Graph 1",
+      "type": "distribution",
+      "x_axis": "Product Name",
+      "y_axis": "Sales",
+      "aggregation": "",
+      "color": "#3498db",
+      "filters": []
+    }
+  ]
+}
+2025-03-02 00:19:48,411 INFO: Dashboard saved successfully with ID: 28
+2025-03-02 00:19:48,412 INFO: 127.0.0.1 - - [02/Mar/2025 00:19:48] "POST /save_dashboard HTTP/1.1" 200 -
+2025-03-02 00:19:49,442 INFO: 127.0.0.1 - - [02/Mar/2025 00:19:49] "GET /view_dashboard/28 HTTP/1.1" 200 -
+2025-03-02 00:19:49,470 INFO: 127.0.0.1 - - [02/Mar/2025 00:19:49] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-02 00:19:49,472 INFO: 127.0.0.1 - - [02/Mar/2025 00:19:49] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-02 00:19:50,823 INFO: 127.0.0.1 - - [02/Mar/2025 00:19:50] "GET /get_dashboard_data/28 HTTP/1.1" 200 -
+2025-03-02 00:20:44,543 INFO: 127.0.0.1 - - [02/Mar/2025 00:20:44] "POST /create HTTP/1.1" 200 -
+2025-03-02 00:20:44,582 INFO: 127.0.0.1 - - [02/Mar/2025 00:20:44] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-02 00:20:44,584 INFO: 127.0.0.1 - - [02/Mar/2025 00:20:44] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-02 00:20:45,999 INFO: 127.0.0.1 - - [02/Mar/2025 00:20:45] "POST /get_columns HTTP/1.1" 200 -
+2025-03-02 00:21:18,721 INFO: 127.0.0.1 - - [02/Mar/2025 00:21:18] "POST /create HTTP/1.1" 200 -
+2025-03-02 00:21:18,743 INFO: 127.0.0.1 - - [02/Mar/2025 00:21:18] "[33mGET /static/css/style.css HTTP/1.1[0m" 404 -
+2025-03-02 00:21:18,745 INFO: 127.0.0.1 - - [02/Mar/2025 00:21:18] "[33mGET /static/js/main.js HTTP/1.1[0m" 404 -
+2025-03-02 00:21:19,149 INFO: 127.0.0.1 - - [02/Mar/2025 00:21:19] "POST /get_columns HTTP/1.1" 200 -
+2025-03-02 00:21:41,611 INFO: 127.0.0.1 - - [02/Mar/2025 00:21:41] "POST /create HTTP/1.1" 200 -
+2025-03-02 00:21:41,635 INFO: 127.0.0.1 - - [02/Mar/2025 00:21:41] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-02 00:21:41,636 INFO: 127.0.0.1 - - [02/Mar/2025 00:21:41] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-02 00:21:42,065 INFO: 127.0.0.1 - - [02/Mar/2025 00:21:42] "POST /get_columns HTTP/1.1" 200 -
+2025-03-02 00:22:06,344 DEBUG: Received dashboard data: {
+  "dashboard_name": "line",
+  "sheet_name": "List of Orders",
+  "theme": "light",
+  "graphs": [
+    {
+      "name": "Graph 1",
+      "type": "line",
+      "x_axis": "Country",
+      "y_axis": "Sales",
+      "filter_column": "Country",
+      "filter_values": [
+        "Sweden",
+        "United Kingdom"
+      ],
+      "aggregation": null,
+      "color": "#3498db"
+    }
+  ]
+}
+2025-03-02 00:22:06,361 INFO: Dashboard saved successfully with ID: 29
+2025-03-02 00:22:06,363 INFO: 127.0.0.1 - - [02/Mar/2025 00:22:06] "POST /save_dashboard HTTP/1.1" 200 -
+2025-03-02 00:22:07,662 INFO: 127.0.0.1 - - [02/Mar/2025 00:22:07] "GET /view_dashboard/29 HTTP/1.1" 200 -
+2025-03-02 00:22:07,688 INFO: 127.0.0.1 - - [02/Mar/2025 00:22:07] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-02 00:22:07,690 INFO: 127.0.0.1 - - [02/Mar/2025 00:22:07] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-02 00:22:09,001 INFO: 127.0.0.1 - - [02/Mar/2025 00:22:09] "GET /get_dashboard_data/29 HTTP/1.1" 200 -
+2025-03-02 00:22:18,495 INFO: 127.0.0.1 - - [02/Mar/2025 00:22:18] "POST /create HTTP/1.1" 200 -
+2025-03-02 00:22:18,528 INFO: 127.0.0.1 - - [02/Mar/2025 00:22:18] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-02 00:22:18,528 INFO: 127.0.0.1 - - [02/Mar/2025 00:22:18] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-02 00:22:19,849 INFO: 127.0.0.1 - - [02/Mar/2025 00:22:19] "POST /get_columns HTTP/1.1" 200 -
+2025-03-02 00:22:42,703 DEBUG: Received dashboard data: {
+  "dashboard_name": "line",
+  "sheet_name": "List of Orders",
+  "theme": "light",
+  "graphs": [
+    {
+      "name": "Graph 1",
+      "type": "line",
+      "x_axis": "Customer Name",
+      "y_axis": "Sales",
+      "filter_column": "Country",
+      "filter_values": [
+        "France"
+      ],
+      "aggregation": null,
+      "color": "#3498db"
+    }
+  ]
+}
+2025-03-02 00:22:42,716 INFO: Dashboard saved successfully with ID: 30
+2025-03-02 00:22:42,718 INFO: 127.0.0.1 - - [02/Mar/2025 00:22:42] "POST /save_dashboard HTTP/1.1" 200 -
+2025-03-02 00:22:43,944 INFO: 127.0.0.1 - - [02/Mar/2025 00:22:43] "GET /view_dashboard/30 HTTP/1.1" 200 -
+2025-03-02 00:22:43,970 INFO: 127.0.0.1 - - [02/Mar/2025 00:22:43] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-02 00:22:43,970 INFO: 127.0.0.1 - - [02/Mar/2025 00:22:43] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-02 00:22:45,295 INFO: 127.0.0.1 - - [02/Mar/2025 00:22:45] "GET /get_dashboard_data/30 HTTP/1.1" 200 -
+2025-03-02 00:22:53,859 INFO: 127.0.0.1 - - [02/Mar/2025 00:22:53] "GET /view_dashboard/30 HTTP/1.1" 200 -
+2025-03-02 00:22:53,884 INFO: 127.0.0.1 - - [02/Mar/2025 00:22:53] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-02 00:22:53,886 INFO: 127.0.0.1 - - [02/Mar/2025 00:22:53] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-02 00:22:55,248 INFO: 127.0.0.1 - - [02/Mar/2025 00:22:55] "GET /get_dashboard_data/30 HTTP/1.1" 200 -
+2025-03-02 00:22:59,502 INFO: 127.0.0.1 - - [02/Mar/2025 00:22:59] "POST /create HTTP/1.1" 200 -
+2025-03-02 00:22:59,540 INFO: 127.0.0.1 - - [02/Mar/2025 00:22:59] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-02 00:22:59,541 INFO: 127.0.0.1 - - [02/Mar/2025 00:22:59] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-02 00:23:00,890 INFO: 127.0.0.1 - - [02/Mar/2025 00:23:00] "POST /get_columns HTTP/1.1" 200 -
+2025-03-02 00:23:24,693 DEBUG: Received dashboard data: {
+  "dashboard_name": "line",
+  "sheet_name": "List of Orders",
+  "theme": "light",
+  "graphs": [
+    {
+      "name": "Graph 1",
+      "type": "line",
+      "x_axis": "Sub-Category",
+      "y_axis": "Profit",
+      "filter_column": "Sub-Category",
+      "filter_values": [
+        "Paper"
+      ],
+      "aggregation": null,
+      "color": "#3498db"
+    }
+  ]
+}
+2025-03-02 00:23:24,711 INFO: Dashboard saved successfully with ID: 31
+2025-03-02 00:23:24,713 INFO: 127.0.0.1 - - [02/Mar/2025 00:23:24] "POST /save_dashboard HTTP/1.1" 200 -
+2025-03-02 00:23:25,835 INFO: 127.0.0.1 - - [02/Mar/2025 00:23:25] "GET /view_dashboard/31 HTTP/1.1" 200 -
+2025-03-02 00:23:25,854 INFO: 127.0.0.1 - - [02/Mar/2025 00:23:25] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-02 00:23:25,860 INFO: 127.0.0.1 - - [02/Mar/2025 00:23:25] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-02 00:23:27,195 INFO: 127.0.0.1 - - [02/Mar/2025 00:23:27] "GET /get_dashboard_data/31 HTTP/1.1" 200 -
+2025-03-02 00:23:35,297 INFO: 127.0.0.1 - - [02/Mar/2025 00:23:35] "POST /create HTTP/1.1" 200 -
+2025-03-02 00:23:35,334 INFO: 127.0.0.1 - - [02/Mar/2025 00:23:35] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-02 00:23:35,335 INFO: 127.0.0.1 - - [02/Mar/2025 00:23:35] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-02 00:23:36,644 INFO: 127.0.0.1 - - [02/Mar/2025 00:23:36] "POST /get_columns HTTP/1.1" 200 -
+2025-03-02 00:23:55,502 DEBUG: Received dashboard data: {
+  "dashboard_name": "power bi",
+  "sheet_name": "List of Orders",
+  "theme": "light",
+  "graphs": [
+    {
+      "name": "Graph 1",
+      "type": "line",
+      "x_axis": "Sub-Category",
+      "y_axis": "Sales",
+      "filter_column": "Sub-Category",
+      "filter_values": [
+        "Bookcases",
+        "Art"
+      ],
+      "aggregation": null,
+      "color": "#3498db"
+    }
+  ]
+}
+2025-03-02 00:23:55,522 INFO: Dashboard saved successfully with ID: 32
+2025-03-02 00:23:55,523 INFO: 127.0.0.1 - - [02/Mar/2025 00:23:55] "POST /save_dashboard HTTP/1.1" 200 -
+2025-03-02 00:23:56,740 INFO: 127.0.0.1 - - [02/Mar/2025 00:23:56] "GET /view_dashboard/32 HTTP/1.1" 200 -
+2025-03-02 00:23:56,766 INFO: 127.0.0.1 - - [02/Mar/2025 00:23:56] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-02 00:23:56,768 INFO: 127.0.0.1 - - [02/Mar/2025 00:23:56] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-02 00:23:58,064 INFO: 127.0.0.1 - - [02/Mar/2025 00:23:58] "GET /get_dashboard_data/32 HTTP/1.1" 200 -
+2025-03-02 00:24:13,315 INFO: 127.0.0.1 - - [02/Mar/2025 00:24:13] "POST /create HTTP/1.1" 200 -
+2025-03-02 00:24:13,349 INFO: 127.0.0.1 - - [02/Mar/2025 00:24:13] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-02 00:24:13,350 INFO: 127.0.0.1 - - [02/Mar/2025 00:24:13] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-02 00:24:14,743 INFO: 127.0.0.1 - - [02/Mar/2025 00:24:14] "POST /get_columns HTTP/1.1" 200 -
+2025-03-02 00:25:24,929 INFO: 127.0.0.1 - - [02/Mar/2025 00:25:24] "GET /dashboard HTTP/1.1" 200 -
+2025-03-02 00:25:24,983 INFO: 127.0.0.1 - - [02/Mar/2025 00:25:24] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-02 00:25:24,985 INFO: 127.0.0.1 - - [02/Mar/2025 00:25:24] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-02 00:25:28,569 INFO: 127.0.0.1 - - [02/Mar/2025 00:25:28] "POST /delete_dashboard/26 HTTP/1.1" 200 -
+2025-03-02 00:25:32,038 INFO: 127.0.0.1 - - [02/Mar/2025 00:25:32] "POST /delete_dashboard/29 HTTP/1.1" 200 -
+2025-03-02 00:25:35,910 INFO: 127.0.0.1 - - [02/Mar/2025 00:25:35] "POST /delete_dashboard/32 HTTP/1.1" 200 -
+2025-03-02 00:25:39,365 INFO: 127.0.0.1 - - [02/Mar/2025 00:25:39] "POST /delete_dashboard/31 HTTP/1.1" 200 -
+2025-03-02 00:25:41,749 INFO: 127.0.0.1 - - [02/Mar/2025 00:25:41] "POST /delete_dashboard/30 HTTP/1.1" 200 -
+2025-03-02 00:25:44,151 INFO: 127.0.0.1 - - [02/Mar/2025 00:25:44] "POST /delete_dashboard/28 HTTP/1.1" 200 -
+2025-03-02 00:25:46,638 INFO: 127.0.0.1 - - [02/Mar/2025 00:25:46] "POST /delete_dashboard/27 HTTP/1.1" 200 -
+2025-03-02 00:25:47,860 INFO: 127.0.0.1 - - [02/Mar/2025 00:25:47] "GET /create HTTP/1.1" 200 -
+2025-03-02 00:25:47,895 INFO: 127.0.0.1 - - [02/Mar/2025 00:25:47] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-02 00:25:47,895 INFO: 127.0.0.1 - - [02/Mar/2025 00:25:47] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-02 00:25:55,231 INFO: 127.0.0.1 - - [02/Mar/2025 00:25:55] "POST /create HTTP/1.1" 200 -
+2025-03-02 00:25:55,251 INFO: 127.0.0.1 - - [02/Mar/2025 00:25:55] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-02 00:25:55,254 INFO: 127.0.0.1 - - [02/Mar/2025 00:25:55] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-02 00:25:56,586 INFO: 127.0.0.1 - - [02/Mar/2025 00:25:56] "POST /get_columns HTTP/1.1" 200 -
+2025-03-02 00:30:58,350 DEBUG: Received dashboard data: {
+  "dashboard_name": "SALES DASHBOARD",
+  "sheet_name": "List of Orders",
+  "theme": "dark",
+  "graphs": [
+    {
+      "name": "Avg sales",
+      "type": "number",
+      "x_axis": "Order ID",
+      "y_axis": "Sales",
+      "filter_column": null,
+      "filter_values": [],
+      "aggregation": "avg",
+      "color": "#3498db"
+    },
+    {
+      "name": "Minimum Profit",
+      "type": "gauge",
+      "x_axis": "Order ID",
+      "y_axis": "Profit",
+      "filter_column": null,
+      "filter_values": [],
+      "aggregation": "min",
+      "color": "#2ecc71"
+    },
+    {
+      "name": "sales in country",
+      "type": "bar",
+      "x_axis": "Country",
+      "y_axis": "Sales",
+      "filter_column": "Country",
+      "filter_values": [
+        "Sweden",
+        "United Kingdom",
+        "France",
+        "Italy",
+        "Austria"
+      ],
+      "aggregation": null,
+      "color": "#e74c3c"
+    },
+    {
+      "name": "Subcategory products profit",
+      "type": "pie",
+      "x_axis": "Sub-Category",
+      "y_axis": "Profit",
+      "filter_column": "Sub-Category",
+      "filter_values": [
+        "Paper",
+        "Bookcases",
+        "Art",
+        "Binders",
+        "Tables",
+        "Chairs"
+      ],
+      "aggregation": null,
+      "color": "#f39c12"
+    },
+    {
+      "name": "sales in city",
+      "type": "scatter",
+      "x_axis": "City",
+      "y_axis": "Sales",
+      "filter_column": "City",
+      "filter_values": [
+        "Stockholm",
+        "Southport",
+        "Valence",
+        "Birmingham"
+      ],
+      "aggregation": null,
+      "color": "#9b59b6"
+    },
+    {
+      "name": "state profit",
+      "type": "joint-bar",
+      "x_axis": "State",
+      "y_axis": "Profit",
+      "filter_column": "State",
+      "filter_values": [
+        "Stockholm",
+        "England",
+        "Auvergne-Rh\u00f4ne-Alpes",
+        "Provence-Alpes-C\u00f4te d'Azur"
+      ],
+      "aggregation": null,
+      "color": "#1abc9c"
+    }
+  ]
+}
+2025-03-02 00:30:58,372 INFO: Dashboard saved successfully with ID: 33
+2025-03-02 00:30:58,374 INFO: 127.0.0.1 - - [02/Mar/2025 00:30:58] "POST /save_dashboard HTTP/1.1" 200 -
+2025-03-02 00:31:00,482 INFO: 127.0.0.1 - - [02/Mar/2025 00:31:00] "GET /view_dashboard/33 HTTP/1.1" 200 -
+2025-03-02 00:31:00,519 INFO: 127.0.0.1 - - [02/Mar/2025 00:31:00] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-02 00:31:00,520 INFO: 127.0.0.1 - - [02/Mar/2025 00:31:00] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-02 00:31:02,040 INFO: 127.0.0.1 - - [02/Mar/2025 00:31:02] "GET /get_dashboard_data/33 HTTP/1.1" 200 -
+2025-03-02 00:31:34,972 INFO: 127.0.0.1 - - [02/Mar/2025 00:31:34] "GET /dashboard HTTP/1.1" 200 -
+2025-03-02 00:31:34,995 INFO: 127.0.0.1 - - [02/Mar/2025 00:31:34] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-02 00:31:34,996 INFO: 127.0.0.1 - - [02/Mar/2025 00:31:34] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-02 00:31:38,022 INFO: 127.0.0.1 - - [02/Mar/2025 00:31:38] "GET /create HTTP/1.1" 200 -
+2025-03-02 00:31:38,048 INFO: 127.0.0.1 - - [02/Mar/2025 00:31:38] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-02 00:31:38,050 INFO: 127.0.0.1 - - [02/Mar/2025 00:31:38] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-02 00:31:39,772 INFO: 127.0.0.1 - - [02/Mar/2025 00:31:39] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-03-02 00:31:39,790 INFO: 127.0.0.1 - - [02/Mar/2025 00:31:39] "GET / HTTP/1.1" 200 -
+2025-03-02 00:31:39,817 INFO: 127.0.0.1 - - [02/Mar/2025 00:31:39] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-02 00:31:39,820 INFO: 127.0.0.1 - - [02/Mar/2025 00:31:39] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-02 00:31:45,003 INFO: 127.0.0.1 - - [02/Mar/2025 00:31:45] "GET /login HTTP/1.1" 200 -
+2025-03-02 00:31:45,025 INFO: 127.0.0.1 - - [02/Mar/2025 00:31:45] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-02 00:31:45,026 INFO: 127.0.0.1 - - [02/Mar/2025 00:31:45] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-02 00:31:54,426 INFO: 127.0.0.1 - - [02/Mar/2025 00:31:54] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-03-02 00:31:54,436 INFO: 127.0.0.1 - - [02/Mar/2025 00:31:54] "GET /dashboard HTTP/1.1" 200 -
+2025-03-02 00:31:54,459 INFO: 127.0.0.1 - - [02/Mar/2025 00:31:54] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-02 00:31:54,460 INFO: 127.0.0.1 - - [02/Mar/2025 00:31:54] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-02 03:08:46,745 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-02 03:08:46,746 INFO: [33mPress CTRL+C to quit[0m
+2025-03-02 03:08:46,787 INFO:  * Restarting with watchdog (windowsapi)
+2025-03-02 03:08:48,666 WARNING:  * Debugger is active!
+2025-03-02 03:08:48,676 INFO:  * Debugger PIN: 125-033-740
+2025-03-02 03:09:51,270 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-02 03:09:51,270 INFO: [33mPress CTRL+C to quit[0m
+2025-03-02 03:09:51,297 INFO:  * Restarting with watchdog (windowsapi)
+2025-03-02 03:09:53,200 WARNING:  * Debugger is active!
+2025-03-02 03:09:53,207 INFO:  * Debugger PIN: 125-033-740
+2025-03-02 03:10:22,901 INFO: 127.0.0.1 - - [02/Mar/2025 03:10:22] "GET / HTTP/1.1" 200 -
+2025-03-02 03:10:23,151 INFO: 127.0.0.1 - - [02/Mar/2025 03:10:23] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-02 03:10:24,101 INFO: 127.0.0.1 - - [02/Mar/2025 03:10:24] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-02 03:10:24,244 INFO: 127.0.0.1 - - [02/Mar/2025 03:10:24] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-03-02 03:10:25,017 INFO: 127.0.0.1 - - [02/Mar/2025 03:10:25] "GET /login HTTP/1.1" 200 -
+2025-03-02 03:10:25,058 INFO: 127.0.0.1 - - [02/Mar/2025 03:10:25] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-02 03:10:25,058 INFO: 127.0.0.1 - - [02/Mar/2025 03:10:25] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-02 03:10:34,725 INFO: 127.0.0.1 - - [02/Mar/2025 03:10:34] "POST /login HTTP/1.1" 200 -
+2025-03-02 03:10:34,764 INFO: 127.0.0.1 - - [02/Mar/2025 03:10:34] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-02 03:10:34,765 INFO: 127.0.0.1 - - [02/Mar/2025 03:10:34] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-02 03:10:37,868 INFO: 127.0.0.1 - - [02/Mar/2025 03:10:37] "GET /register HTTP/1.1" 200 -
+2025-03-02 03:10:37,895 INFO: 127.0.0.1 - - [02/Mar/2025 03:10:37] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-02 03:10:37,896 INFO: 127.0.0.1 - - [02/Mar/2025 03:10:37] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-02 03:10:57,279 INFO: 127.0.0.1 - - [02/Mar/2025 03:10:57] "[32mPOST /register HTTP/1.1[0m" 302 -
+2025-03-02 03:10:57,288 INFO: 127.0.0.1 - - [02/Mar/2025 03:10:57] "GET /login HTTP/1.1" 200 -
+2025-03-02 03:10:57,345 INFO: 127.0.0.1 - - [02/Mar/2025 03:10:57] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-02 03:10:57,347 INFO: 127.0.0.1 - - [02/Mar/2025 03:10:57] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-02 03:11:05,239 INFO: 127.0.0.1 - - [02/Mar/2025 03:11:05] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-03-02 03:11:05,320 INFO: 127.0.0.1 - - [02/Mar/2025 03:11:05] "GET /dashboard HTTP/1.1" 200 -
+2025-03-02 03:11:05,363 INFO: 127.0.0.1 - - [02/Mar/2025 03:11:05] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-02 03:11:05,364 INFO: 127.0.0.1 - - [02/Mar/2025 03:11:05] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-03 17:49:37,830 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-03 17:49:37,831 INFO: [33mPress CTRL+C to quit[0m
+2025-03-03 17:49:37,846 INFO:  * Restarting with watchdog (windowsapi)
+2025-03-03 17:49:38,557 WARNING:  * Debugger is active!
+2025-03-03 17:49:38,562 INFO:  * Debugger PIN: 125-033-740
+2025-03-03 17:49:56,777 INFO: 127.0.0.1 - - [03/Mar/2025 17:49:56] "GET / HTTP/1.1" 200 -
+2025-03-03 17:49:57,011 INFO: 127.0.0.1 - - [03/Mar/2025 17:49:57] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-03 17:49:57,935 INFO: 127.0.0.1 - - [03/Mar/2025 17:49:57] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-03 17:49:57,989 INFO: 127.0.0.1 - - [03/Mar/2025 17:49:57] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-03-03 17:51:50,188 INFO: 127.0.0.1 - - [03/Mar/2025 17:51:50] "GET /login HTTP/1.1" 200 -
+2025-03-03 17:51:50,212 INFO: 127.0.0.1 - - [03/Mar/2025 17:51:50] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-03 17:51:50,220 INFO: 127.0.0.1 - - [03/Mar/2025 17:51:50] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-03 17:52:27,009 INFO: 127.0.0.1 - - [03/Mar/2025 17:52:27] "GET /register HTTP/1.1" 200 -
+2025-03-03 17:52:27,055 INFO: 127.0.0.1 - - [03/Mar/2025 17:52:27] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-03 17:52:27,058 INFO: 127.0.0.1 - - [03/Mar/2025 17:52:27] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-03 17:53:06,703 INFO: 127.0.0.1 - - [03/Mar/2025 17:53:06] "GET /login HTTP/1.1" 200 -
+2025-03-03 17:53:06,729 INFO: 127.0.0.1 - - [03/Mar/2025 17:53:06] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-03 17:53:06,733 INFO: 127.0.0.1 - - [03/Mar/2025 17:53:06] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-03 17:53:13,223 INFO: 127.0.0.1 - - [03/Mar/2025 17:53:13] "POST /login HTTP/1.1" 200 -
+2025-03-03 17:53:13,244 INFO: 127.0.0.1 - - [03/Mar/2025 17:53:13] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-03 17:53:13,246 INFO: 127.0.0.1 - - [03/Mar/2025 17:53:13] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-03 17:53:26,898 INFO: 127.0.0.1 - - [03/Mar/2025 17:53:26] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-03-03 17:53:26,922 INFO: 127.0.0.1 - - [03/Mar/2025 17:53:26] "GET /dashboard HTTP/1.1" 200 -
+2025-03-03 17:53:26,947 INFO: 127.0.0.1 - - [03/Mar/2025 17:53:26] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-03 17:53:26,949 INFO: 127.0.0.1 - - [03/Mar/2025 17:53:26] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-03 17:54:14,060 INFO: 127.0.0.1 - - [03/Mar/2025 17:54:14] "GET /create HTTP/1.1" 200 -
+2025-03-03 17:54:14,094 INFO: 127.0.0.1 - - [03/Mar/2025 17:54:14] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-03 17:54:14,096 INFO: 127.0.0.1 - - [03/Mar/2025 17:54:14] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-03 17:54:32,258 INFO: 127.0.0.1 - - [03/Mar/2025 17:54:32] "POST /create HTTP/1.1" 200 -
+2025-03-03 17:54:32,283 INFO: 127.0.0.1 - - [03/Mar/2025 17:54:32] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-03 17:54:32,288 INFO: 127.0.0.1 - - [03/Mar/2025 17:54:32] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-03 17:54:33,856 INFO: 127.0.0.1 - - [03/Mar/2025 17:54:33] "POST /get_columns HTTP/1.1" 200 -
+2025-03-03 17:56:13,497 INFO: 127.0.0.1 - - [03/Mar/2025 17:56:13] "GET /dashboard HTTP/1.1" 200 -
+2025-03-03 17:56:13,513 INFO: 127.0.0.1 - - [03/Mar/2025 17:56:13] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-03 17:56:13,517 INFO: 127.0.0.1 - - [03/Mar/2025 17:56:13] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-03 17:56:14,749 INFO: 127.0.0.1 - - [03/Mar/2025 17:56:14] "GET /view_dashboard/33 HTTP/1.1" 200 -
+2025-03-03 17:56:14,781 INFO: 127.0.0.1 - - [03/Mar/2025 17:56:14] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-03 17:56:14,783 INFO: 127.0.0.1 - - [03/Mar/2025 17:56:14] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-03 17:56:16,318 INFO: 127.0.0.1 - - [03/Mar/2025 17:56:16] "GET /get_dashboard_data/33 HTTP/1.1" 200 -
+2025-03-03 23:31:34,024 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-03 23:31:34,025 INFO: [33mPress CTRL+C to quit[0m
+2025-03-03 23:31:34,028 INFO:  * Restarting with stat
+2025-03-03 23:31:35,857 WARNING:  * Debugger is active!
+2025-03-03 23:31:35,863 INFO:  * Debugger PIN: 951-480-883
+2025-03-03 23:31:49,643 INFO: 127.0.0.1 - - [03/Mar/2025 23:31:49] "GET / HTTP/1.1" 200 -
+2025-03-03 23:31:49,910 INFO: 127.0.0.1 - - [03/Mar/2025 23:31:49] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-03 23:31:50,968 INFO: 127.0.0.1 - - [03/Mar/2025 23:31:50] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-03 23:31:51,002 INFO: 127.0.0.1 - - [03/Mar/2025 23:31:51] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-03-03 23:31:56,893 INFO: 127.0.0.1 - - [03/Mar/2025 23:31:56] "GET /login HTTP/1.1" 200 -
+2025-03-03 23:31:56,942 INFO: 127.0.0.1 - - [03/Mar/2025 23:31:56] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-03 23:31:56,943 INFO: 127.0.0.1 - - [03/Mar/2025 23:31:56] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-03 23:32:03,042 INFO: 127.0.0.1 - - [03/Mar/2025 23:32:03] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-03-03 23:32:03,141 INFO: 127.0.0.1 - - [03/Mar/2025 23:32:03] "GET /dashboard HTTP/1.1" 200 -
+2025-03-03 23:32:03,194 INFO: 127.0.0.1 - - [03/Mar/2025 23:32:03] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-03 23:32:03,196 INFO: 127.0.0.1 - - [03/Mar/2025 23:32:03] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-03 23:32:05,992 INFO: 127.0.0.1 - - [03/Mar/2025 23:32:05] "GET /create HTTP/1.1" 200 -
+2025-03-03 23:32:06,042 INFO: 127.0.0.1 - - [03/Mar/2025 23:32:06] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-03 23:32:06,043 INFO: 127.0.0.1 - - [03/Mar/2025 23:32:06] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-03 23:32:14,529 INFO: 127.0.0.1 - - [03/Mar/2025 23:32:14] "[35m[1mPOST /create HTTP/1.1[0m" 500 -
+2025-03-03 23:32:14,602 INFO: 127.0.0.1 - - [03/Mar/2025 23:32:14] "GET /create?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-03-03 23:32:14,647 INFO: 127.0.0.1 - - [03/Mar/2025 23:32:14] "GET /create?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-03-03 23:32:14,747 INFO: 127.0.0.1 - - [03/Mar/2025 23:32:14] "GET /create?__debugger__=yes&cmd=resource&f=console.png&s=oyhFCBjoYAEAZuqx1DN1 HTTP/1.1" 200 -
+2025-03-03 23:32:14,767 INFO: 127.0.0.1 - - [03/Mar/2025 23:32:14] "GET /create?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-03-03 23:34:34,631 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-03 23:34:34,632 INFO: [33mPress CTRL+C to quit[0m
+2025-03-03 23:34:34,636 INFO:  * Restarting with stat
+2025-03-03 23:34:36,805 WARNING:  * Debugger is active!
+2025-03-03 23:34:36,814 INFO:  * Debugger PIN: 951-480-883
+2025-03-03 23:34:36,855 INFO: 127.0.0.1 - - [03/Mar/2025 23:34:36] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-03 23:34:36,887 INFO: 127.0.0.1 - - [03/Mar/2025 23:34:36] "GET /dashboard HTTP/1.1" 200 -
+2025-03-03 23:34:37,028 INFO: 127.0.0.1 - - [03/Mar/2025 23:34:37] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-03 23:34:37,037 INFO: 127.0.0.1 - - [03/Mar/2025 23:34:37] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-03 23:34:39,242 INFO: 127.0.0.1 - - [03/Mar/2025 23:34:39] "GET /create HTTP/1.1" 200 -
+2025-03-03 23:34:39,290 INFO: 127.0.0.1 - - [03/Mar/2025 23:34:39] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-03 23:34:39,298 INFO: 127.0.0.1 - - [03/Mar/2025 23:34:39] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-03 23:34:52,511 INFO: 127.0.0.1 - - [03/Mar/2025 23:34:52] "POST /create HTTP/1.1" 200 -
+2025-03-03 23:34:52,558 INFO: 127.0.0.1 - - [03/Mar/2025 23:34:52] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-03 23:34:52,564 INFO: 127.0.0.1 - - [03/Mar/2025 23:34:52] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-03 23:34:54,707 INFO: 127.0.0.1 - - [03/Mar/2025 23:34:54] "POST /get_columns HTTP/1.1" 200 -
+2025-03-03 23:35:15,383 DEBUG: Received dashboard data: {
+  "dashboard_name": "dash",
+  "sheet_name": "List of Orders",
+  "theme": "light",
+  "graphs": [
+    {
+      "name": "Graph 1",
+      "type": "bar",
+      "x_axis": "Country",
+      "y_axis": "Sales",
+      "filter_column": "Country",
+      "filter_values": [
+        "Sweden",
+        "United Kingdom"
+      ],
+      "aggregation": null,
+      "color": "#3498db"
+    }
+  ]
+}
+2025-03-03 23:35:15,403 INFO: Dashboard saved successfully with ID: 34
+2025-03-03 23:35:15,405 INFO: 127.0.0.1 - - [03/Mar/2025 23:35:15] "POST /save_dashboard HTTP/1.1" 200 -
+2025-03-03 23:35:17,421 INFO: 127.0.0.1 - - [03/Mar/2025 23:35:17] "GET /view_dashboard/34 HTTP/1.1" 200 -
+2025-03-03 23:35:17,462 INFO: 127.0.0.1 - - [03/Mar/2025 23:35:17] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-03 23:35:17,463 INFO: 127.0.0.1 - - [03/Mar/2025 23:35:17] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-03 23:35:19,255 INFO: 127.0.0.1 - - [03/Mar/2025 23:35:19] "GET /get_dashboard_data/34 HTTP/1.1" 200 -
+2025-03-03 23:35:28,671 INFO: 127.0.0.1 - - [03/Mar/2025 23:35:28] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-03 23:35:40,343 INFO: 127.0.0.1 - - [03/Mar/2025 23:35:40] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-08 15:09:44,001 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-08 15:09:44,002 INFO: [33mPress CTRL+C to quit[0m
+2025-03-08 15:09:44,004 INFO:  * Restarting with stat
+2025-03-08 15:09:44,962 WARNING:  * Debugger is active!
+2025-03-08 15:09:44,965 INFO:  * Debugger PIN: 951-480-883
+2025-03-08 15:10:11,582 INFO: 127.0.0.1 - - [08/Mar/2025 15:10:11] "GET /login HTTP/1.1" 200 -
+2025-03-08 15:10:11,880 INFO: 127.0.0.1 - - [08/Mar/2025 15:10:11] "GET /static/css/styles.css HTTP/1.1" 200 -
+2025-03-08 15:10:12,839 INFO: 127.0.0.1 - - [08/Mar/2025 15:10:12] "GET /static/js/script.js HTTP/1.1" 200 -
+2025-03-08 15:10:12,888 INFO: 127.0.0.1 - - [08/Mar/2025 15:10:12] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-03-08 15:10:15,150 INFO: 127.0.0.1 - - [08/Mar/2025 15:10:15] "GET / HTTP/1.1" 200 -
+2025-03-08 15:10:15,202 INFO: 127.0.0.1 - - [08/Mar/2025 15:10:15] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-08 15:10:15,203 INFO: 127.0.0.1 - - [08/Mar/2025 15:10:15] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-08 15:11:21,194 INFO: 127.0.0.1 - - [08/Mar/2025 15:11:21] "GET /login HTTP/1.1" 200 -
+2025-03-08 15:11:21,223 INFO: 127.0.0.1 - - [08/Mar/2025 15:11:21] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-08 15:11:21,225 INFO: 127.0.0.1 - - [08/Mar/2025 15:11:21] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-08 15:11:23,343 INFO: 127.0.0.1 - - [08/Mar/2025 15:11:23] "GET /register HTTP/1.1" 200 -
+2025-03-08 15:11:23,367 INFO: 127.0.0.1 - - [08/Mar/2025 15:11:23] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-08 15:11:23,372 INFO: 127.0.0.1 - - [08/Mar/2025 15:11:23] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-08 15:12:16,357 INFO: 127.0.0.1 - - [08/Mar/2025 15:12:16] "[32mPOST /register HTTP/1.1[0m" 302 -
+2025-03-08 15:12:16,367 INFO: 127.0.0.1 - - [08/Mar/2025 15:12:16] "GET /login HTTP/1.1" 200 -
+2025-03-08 15:12:16,397 INFO: 127.0.0.1 - - [08/Mar/2025 15:12:16] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-08 15:12:16,398 INFO: 127.0.0.1 - - [08/Mar/2025 15:12:16] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-08 15:12:34,518 INFO: 127.0.0.1 - - [08/Mar/2025 15:12:34] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-03-08 15:12:34,630 INFO: 127.0.0.1 - - [08/Mar/2025 15:12:34] "GET /dashboard HTTP/1.1" 200 -
+2025-03-08 15:12:34,665 INFO: 127.0.0.1 - - [08/Mar/2025 15:12:34] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-08 15:12:34,666 INFO: 127.0.0.1 - - [08/Mar/2025 15:12:34] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-08 15:12:36,767 INFO: 127.0.0.1 - - [08/Mar/2025 15:12:36] "GET /create HTTP/1.1" 200 -
+2025-03-08 15:12:36,799 INFO: 127.0.0.1 - - [08/Mar/2025 15:12:36] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-08 15:12:36,801 INFO: 127.0.0.1 - - [08/Mar/2025 15:12:36] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-08 15:12:44,745 INFO: 127.0.0.1 - - [08/Mar/2025 15:12:44] "POST /create HTTP/1.1" 200 -
+2025-03-08 15:12:44,774 INFO: 127.0.0.1 - - [08/Mar/2025 15:12:44] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-08 15:12:44,776 INFO: 127.0.0.1 - - [08/Mar/2025 15:12:44] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-08 15:12:46,626 INFO: 127.0.0.1 - - [08/Mar/2025 15:12:46] "POST /get_columns HTTP/1.1" 200 -
+2025-03-08 15:14:38,664 INFO: 127.0.0.1 - - [08/Mar/2025 15:14:38] "POST /create HTTP/1.1" 200 -
+2025-03-08 15:14:38,688 INFO: 127.0.0.1 - - [08/Mar/2025 15:14:38] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-08 15:14:38,690 INFO: 127.0.0.1 - - [08/Mar/2025 15:14:38] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-08 15:14:40,427 INFO: 127.0.0.1 - - [08/Mar/2025 15:14:40] "POST /get_columns HTTP/1.1" 200 -
+2025-03-08 15:23:54,773 DEBUG: Received dashboard data: {
+  "dashboard_name": "sales dashboard",
+  "sheet_name": "List of Orders",
+  "theme": "light",
+  "graphs": [
+    {
+      "name": "sales average",
+      "type": "number",
+      "x_axis": "Order ID",
+      "y_axis": "Sales",
+      "filter_column": null,
+      "filter_values": [],
+      "aggregation": "avg",
+      "color": "#3498db"
+    },
+    {
+      "name": "Minimum Profit",
+      "type": "gauge",
+      "x_axis": "Order ID",
+      "y_axis": "Profit",
+      "filter_column": null,
+      "filter_values": [],
+      "aggregation": "min",
+      "color": "#2ecc71"
+    },
+    {
+      "name": "Sales in country",
+      "type": "bar",
+      "x_axis": "Country",
+      "y_axis": "Sales",
+      "filter_column": "Country",
+      "filter_values": [
+        "Sweden",
+        "United Kingdom",
+        "France",
+        "Italy"
+      ],
+      "aggregation": null,
+      "color": "#e74c3c"
+    },
+    {
+      "name": "Subcategory products profit",
+      "type": "pie",
+      "x_axis": "Sub-Category",
+      "y_axis": "Profit",
+      "filter_column": "Sub-Category",
+      "filter_values": [
+        "Paper",
+        "Bookcases",
+        "Art",
+        "Binders",
+        "Tables",
+        "Appliances"
+      ],
+      "aggregation": null,
+      "color": "#f39c12"
+    },
+    {
+      "name": "Sales in City",
+      "type": "scatter",
+      "x_axis": "City",
+      "y_axis": "Sales",
+      "filter_column": "City",
+      "filter_values": [
+        "Stockholm",
+        "Southport",
+        "Valence",
+        "Birmingham"
+      ],
+      "aggregation": null,
+      "color": "#9b59b6"
+    },
+    {
+      "name": "Profit in states",
+      "type": "joint-bar",
+      "x_axis": "State",
+      "y_axis": "Profit",
+      "filter_column": "State",
+      "filter_values": [
+        "Liguria",
+        "Vienna",
+        "Murcia"
+      ],
+      "aggregation": null,
+      "color": "#1abc9c"
+    }
+  ]
+}
+2025-03-08 15:23:54,792 INFO: Dashboard saved successfully with ID: 35
+2025-03-08 15:23:54,794 INFO: 127.0.0.1 - - [08/Mar/2025 15:23:54] "POST /save_dashboard HTTP/1.1" 200 -
+2025-03-08 15:23:58,185 INFO: 127.0.0.1 - - [08/Mar/2025 15:23:58] "GET /view_dashboard/35 HTTP/1.1" 200 -
+2025-03-08 15:23:58,222 INFO: 127.0.0.1 - - [08/Mar/2025 15:23:58] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-08 15:23:59,046 INFO: 127.0.0.1 - - [08/Mar/2025 15:23:59] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-08 15:24:00,704 INFO: 127.0.0.1 - - [08/Mar/2025 15:24:00] "GET /get_dashboard_data/35 HTTP/1.1" 200 -
+2025-03-08 15:24:30,279 INFO: 127.0.0.1 - - [08/Mar/2025 15:24:30] "GET /dashboard HTTP/1.1" 200 -
+2025-03-08 15:24:30,301 INFO: 127.0.0.1 - - [08/Mar/2025 15:24:30] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-08 15:24:30,303 INFO: 127.0.0.1 - - [08/Mar/2025 15:24:30] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-08 15:24:37,541 INFO: 127.0.0.1 - - [08/Mar/2025 15:24:37] "GET /create HTTP/1.1" 200 -
+2025-03-08 15:24:37,561 INFO: 127.0.0.1 - - [08/Mar/2025 15:24:37] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-08 15:24:37,563 INFO: 127.0.0.1 - - [08/Mar/2025 15:24:37] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-08 15:24:41,233 INFO: 127.0.0.1 - - [08/Mar/2025 15:24:41] "GET /dashboard HTTP/1.1" 200 -
+2025-03-08 15:24:41,257 INFO: 127.0.0.1 - - [08/Mar/2025 15:24:41] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-08 15:24:41,258 INFO: 127.0.0.1 - - [08/Mar/2025 15:24:41] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-08 15:24:42,785 INFO: 127.0.0.1 - - [08/Mar/2025 15:24:42] "GET /view_dashboard/35 HTTP/1.1" 200 -
+2025-03-08 15:24:42,804 INFO: 127.0.0.1 - - [08/Mar/2025 15:24:42] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-08 15:24:42,806 INFO: 127.0.0.1 - - [08/Mar/2025 15:24:42] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-08 15:24:44,473 INFO: 127.0.0.1 - - [08/Mar/2025 15:24:44] "GET /get_dashboard_data/35 HTTP/1.1" 200 -
+2025-03-08 15:24:48,715 INFO: 127.0.0.1 - - [08/Mar/2025 15:24:48] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-03-08 15:24:48,722 INFO: 127.0.0.1 - - [08/Mar/2025 15:24:48] "GET / HTTP/1.1" 200 -
+2025-03-08 15:24:48,746 INFO: 127.0.0.1 - - [08/Mar/2025 15:24:48] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-08 15:24:48,748 INFO: 127.0.0.1 - - [08/Mar/2025 15:24:48] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-08 15:45:47,126 INFO: 127.0.0.1 - - [08/Mar/2025 15:45:47] "GET /login HTTP/1.1" 200 -
+2025-03-08 15:45:47,153 INFO: 127.0.0.1 - - [08/Mar/2025 15:45:47] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-08 15:45:47,154 INFO: 127.0.0.1 - - [08/Mar/2025 15:45:47] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-08 15:45:48,689 INFO: 127.0.0.1 - - [08/Mar/2025 15:45:48] "GET /register HTTP/1.1" 200 -
+2025-03-08 15:45:48,713 INFO: 127.0.0.1 - - [08/Mar/2025 15:45:48] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-08 15:45:48,714 INFO: 127.0.0.1 - - [08/Mar/2025 15:45:48] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-08 15:46:03,380 INFO: 127.0.0.1 - - [08/Mar/2025 15:46:03] "[32mPOST /register HTTP/1.1[0m" 302 -
+2025-03-08 15:46:03,390 INFO: 127.0.0.1 - - [08/Mar/2025 15:46:03] "GET /login HTTP/1.1" 200 -
+2025-03-08 15:46:03,416 INFO: 127.0.0.1 - - [08/Mar/2025 15:46:03] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-08 15:46:03,416 INFO: 127.0.0.1 - - [08/Mar/2025 15:46:03] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-08 15:46:18,025 INFO: 127.0.0.1 - - [08/Mar/2025 15:46:18] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-03-08 15:46:18,033 INFO: 127.0.0.1 - - [08/Mar/2025 15:46:18] "GET /dashboard HTTP/1.1" 200 -
+2025-03-08 15:46:18,065 INFO: 127.0.0.1 - - [08/Mar/2025 15:46:18] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-08 15:46:18,065 INFO: 127.0.0.1 - - [08/Mar/2025 15:46:18] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-08 15:46:20,200 INFO: 127.0.0.1 - - [08/Mar/2025 15:46:20] "GET /create HTTP/1.1" 200 -
+2025-03-08 15:46:20,226 INFO: 127.0.0.1 - - [08/Mar/2025 15:46:20] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-08 15:46:20,227 INFO: 127.0.0.1 - - [08/Mar/2025 15:46:20] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-08 15:46:28,359 INFO: 127.0.0.1 - - [08/Mar/2025 15:46:28] "POST /create HTTP/1.1" 200 -
+2025-03-08 15:46:28,385 INFO: 127.0.0.1 - - [08/Mar/2025 15:46:28] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-08 15:46:28,386 INFO: 127.0.0.1 - - [08/Mar/2025 15:46:28] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-08 15:46:29,857 INFO: 127.0.0.1 - - [08/Mar/2025 15:46:29] "POST /get_columns HTTP/1.1" 200 -
+2025-03-08 15:51:48,810 DEBUG: Received dashboard data: {
+  "dashboard_name": "Sales Dashboard",
+  "sheet_name": "List of Orders",
+  "theme": "light",
+  "graphs": [
+    {
+      "name": "Sales Average",
+      "type": "number",
+      "x_axis": "Order ID",
+      "y_axis": "Sales",
+      "filter_column": null,
+      "filter_values": [],
+      "aggregation": "avg",
+      "color": "#3498db"
+    },
+    {
+      "name": "minimum profit ",
+      "type": "gauge",
+      "x_axis": "Order ID",
+      "y_axis": "Profit",
+      "filter_column": null,
+      "filter_values": [],
+      "aggregation": "min",
+      "color": "#2ecc71"
+    },
+    {
+      "name": "country sales",
+      "type": "bar",
+      "x_axis": "Country",
+      "y_axis": "Sales",
+      "filter_column": "Country",
+      "filter_values": [
+        "Sweden",
+        "United Kingdom",
+        "France",
+        "Italy"
+      ],
+      "aggregation": null,
+      "color": "#e74c3c"
+    },
+    {
+      "name": "Sub category products sales",
+      "type": "pie",
+      "x_axis": "Sub-Category",
+      "y_axis": "Sales",
+      "filter_column": "Sub-Category",
+      "filter_values": [
+        "Paper",
+        "Bookcases",
+        "Art",
+        "Binders"
+      ],
+      "aggregation": null,
+      "color": "#f39c12"
+    },
+    {
+      "name": "city sales",
+      "type": "scatter",
+      "x_axis": "City",
+      "y_axis": "Sales",
+      "filter_column": "City",
+      "filter_values": [
+        "Stockholm",
+        "Valence",
+        "Birmingham",
+        "Echirolles"
+      ],
+      "aggregation": null,
+      "color": "#9b59b6"
+    },
+    {
+      "name": "Shipment mode in state",
+      "type": "donut",
+      "x_axis": "State",
+      "y_axis": "Ship Mode",
+      "filter_column": "State",
+      "filter_values": [
+        "Stockholm",
+        "England",
+        "Auvergne-Rh\u00f4ne-Alpes",
+        "Provence-Alpes-C\u00f4te d'Azur"
+      ],
+      "aggregation": null,
+      "color": "#1abc9c"
+    }
+  ]
+}
+2025-03-08 15:51:48,826 INFO: Dashboard saved successfully with ID: 36
+2025-03-08 15:51:48,827 INFO: 127.0.0.1 - - [08/Mar/2025 15:51:48] "POST /save_dashboard HTTP/1.1" 200 -
+2025-03-08 15:51:50,714 INFO: 127.0.0.1 - - [08/Mar/2025 15:51:50] "GET /view_dashboard/36 HTTP/1.1" 200 -
+2025-03-08 15:51:50,751 INFO: 127.0.0.1 - - [08/Mar/2025 15:51:50] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-08 15:51:50,752 INFO: 127.0.0.1 - - [08/Mar/2025 15:51:50] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-08 15:51:52,337 INFO: 127.0.0.1 - - [08/Mar/2025 15:51:52] "GET /get_dashboard_data/36 HTTP/1.1" 200 -
+2025-03-08 15:52:25,581 INFO: 127.0.0.1 - - [08/Mar/2025 15:52:25] "POST /create HTTP/1.1" 200 -
+2025-03-08 15:52:25,614 INFO: 127.0.0.1 - - [08/Mar/2025 15:52:25] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-08 15:52:25,615 INFO: 127.0.0.1 - - [08/Mar/2025 15:52:25] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-08 15:52:27,251 INFO: 127.0.0.1 - - [08/Mar/2025 15:52:27] "POST /get_columns HTTP/1.1" 200 -
+2025-03-08 15:58:49,846 DEBUG: Received dashboard data: {
+  "dashboard_name": "Sales Dashboard",
+  "sheet_name": "List of Orders",
+  "theme": "light",
+  "graphs": [
+    {
+      "name": "Sales Average",
+      "type": "number",
+      "x_axis": "Order ID",
+      "y_axis": "Sales",
+      "filter_column": null,
+      "filter_values": [],
+      "aggregation": "avg",
+      "color": "#3498db"
+    },
+    {
+      "name": "minimum profit",
+      "type": "gauge",
+      "x_axis": "Order ID",
+      "y_axis": "Profit",
+      "filter_column": null,
+      "filter_values": [],
+      "aggregation": "min",
+      "color": "#2ecc71"
+    },
+    {
+      "name": "country sales",
+      "type": "bar",
+      "x_axis": "Country",
+      "y_axis": "Sales",
+      "filter_column": "Country",
+      "filter_values": [
+        "Sweden",
+        "United Kingdom",
+        "France",
+        "Italy"
+      ],
+      "aggregation": null,
+      "color": "#e74c3c"
+    },
+    {
+      "name": "subcategory product profit",
+      "type": "pie",
+      "x_axis": "Sub-Category",
+      "y_axis": "Profit",
+      "filter_column": "Sub-Category",
+      "filter_values": [
+        "Paper",
+        "Bookcases",
+        "Art",
+        "Tables"
+      ],
+      "aggregation": null,
+      "color": "#f39c12"
+    },
+    {
+      "name": "city profit",
+      "type": "scatter",
+      "x_axis": "City",
+      "y_axis": "Profit",
+      "filter_column": "City",
+      "filter_values": [
+        "Stockholm",
+        "Valence",
+        "Birmingham",
+        "Echirolles"
+      ],
+      "aggregation": null,
+      "color": "#9b59b6"
+    },
+    {
+      "name": "state shipment mode",
+      "type": "joint-bar",
+      "x_axis": "State",
+      "y_axis": "Ship Mode",
+      "filter_column": "State",
+      "filter_values": [
+        "Vienna",
+        "Murcia",
+        "Lower Saxony",
+        "South Holland"
+      ],
+      "aggregation": null,
+      "color": "#1abc9c"
+    }
+  ]
+}
+2025-03-08 15:58:49,862 INFO: Dashboard saved successfully with ID: 37
+2025-03-08 15:58:49,864 INFO: 127.0.0.1 - - [08/Mar/2025 15:58:49] "POST /save_dashboard HTTP/1.1" 200 -
+2025-03-08 15:58:51,591 INFO: 127.0.0.1 - - [08/Mar/2025 15:58:51] "GET /view_dashboard/37 HTTP/1.1" 200 -
+2025-03-08 15:58:51,631 INFO: 127.0.0.1 - - [08/Mar/2025 15:58:51] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-08 15:58:51,632 INFO: 127.0.0.1 - - [08/Mar/2025 15:58:51] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-08 15:58:53,221 INFO: 127.0.0.1 - - [08/Mar/2025 15:58:53] "GET /get_dashboard_data/37 HTTP/1.1" 200 -
+2025-03-08 15:59:10,447 INFO: 127.0.0.1 - - [08/Mar/2025 15:59:10] "GET /dashboard HTTP/1.1" 200 -
+2025-03-08 15:59:10,494 INFO: 127.0.0.1 - - [08/Mar/2025 15:59:10] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-08 15:59:10,496 INFO: 127.0.0.1 - - [08/Mar/2025 15:59:10] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-08 15:59:13,249 INFO: 127.0.0.1 - - [08/Mar/2025 15:59:13] "GET /view_dashboard/36 HTTP/1.1" 200 -
+2025-03-08 15:59:13,295 INFO: 127.0.0.1 - - [08/Mar/2025 15:59:13] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-08 15:59:13,297 INFO: 127.0.0.1 - - [08/Mar/2025 15:59:13] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-08 15:59:14,964 INFO: 127.0.0.1 - - [08/Mar/2025 15:59:14] "GET /get_dashboard_data/36 HTTP/1.1" 200 -
+2025-03-08 15:59:21,458 INFO: 127.0.0.1 - - [08/Mar/2025 15:59:21] "GET /dashboard HTTP/1.1" 200 -
+2025-03-08 15:59:21,499 INFO: 127.0.0.1 - - [08/Mar/2025 15:59:21] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-08 15:59:21,500 INFO: 127.0.0.1 - - [08/Mar/2025 15:59:21] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-08 15:59:22,940 INFO: 127.0.0.1 - - [08/Mar/2025 15:59:22] "GET /view_dashboard/37 HTTP/1.1" 200 -
+2025-03-08 15:59:22,987 INFO: 127.0.0.1 - - [08/Mar/2025 15:59:22] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-08 15:59:22,988 INFO: 127.0.0.1 - - [08/Mar/2025 15:59:22] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-08 15:59:24,585 INFO: 127.0.0.1 - - [08/Mar/2025 15:59:24] "GET /get_dashboard_data/37 HTTP/1.1" 200 -
+2025-03-08 15:59:30,166 INFO: 127.0.0.1 - - [08/Mar/2025 15:59:30] "GET /create HTTP/1.1" 200 -
+2025-03-08 15:59:30,210 INFO: 127.0.0.1 - - [08/Mar/2025 15:59:30] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-08 15:59:30,212 INFO: 127.0.0.1 - - [08/Mar/2025 15:59:30] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-08 15:59:32,130 INFO: 127.0.0.1 - - [08/Mar/2025 15:59:32] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-03-08 15:59:32,139 INFO: 127.0.0.1 - - [08/Mar/2025 15:59:32] "GET / HTTP/1.1" 200 -
+2025-03-08 15:59:32,191 INFO: 127.0.0.1 - - [08/Mar/2025 15:59:32] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-08 15:59:32,194 INFO: 127.0.0.1 - - [08/Mar/2025 15:59:32] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-08 16:08:04,967 INFO: 127.0.0.1 - - [08/Mar/2025 16:08:04] "GET /register HTTP/1.1" 200 -
+2025-03-08 16:08:05,015 INFO: 127.0.0.1 - - [08/Mar/2025 16:08:05] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-08 16:08:05,017 INFO: 127.0.0.1 - - [08/Mar/2025 16:08:05] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-08 16:08:28,417 INFO: 127.0.0.1 - - [08/Mar/2025 16:08:28] "POST /register HTTP/1.1" 200 -
+2025-03-08 16:08:28,449 INFO: 127.0.0.1 - - [08/Mar/2025 16:08:28] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-08 16:08:28,451 INFO: 127.0.0.1 - - [08/Mar/2025 16:08:28] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-08 16:08:45,261 INFO: 127.0.0.1 - - [08/Mar/2025 16:08:45] "POST /register HTTP/1.1" 200 -
+2025-03-08 16:08:45,287 INFO: 127.0.0.1 - - [08/Mar/2025 16:08:45] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-08 16:08:45,289 INFO: 127.0.0.1 - - [08/Mar/2025 16:08:45] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-08 16:08:47,122 INFO: 127.0.0.1 - - [08/Mar/2025 16:08:47] "GET /register HTTP/1.1" 200 -
+2025-03-08 16:09:03,962 INFO: 127.0.0.1 - - [08/Mar/2025 16:09:03] "[32mPOST /register HTTP/1.1[0m" 302 -
+2025-03-08 16:09:03,972 INFO: 127.0.0.1 - - [08/Mar/2025 16:09:03] "GET /login HTTP/1.1" 200 -
+2025-03-08 16:09:04,016 INFO: 127.0.0.1 - - [08/Mar/2025 16:09:04] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-08 16:09:04,022 INFO: 127.0.0.1 - - [08/Mar/2025 16:09:04] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-08 16:09:19,704 INFO: 127.0.0.1 - - [08/Mar/2025 16:09:19] "POST /login HTTP/1.1" 200 -
+2025-03-08 16:09:19,729 INFO: 127.0.0.1 - - [08/Mar/2025 16:09:19] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-08 16:09:19,731 INFO: 127.0.0.1 - - [08/Mar/2025 16:09:19] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-08 16:09:27,133 INFO: 127.0.0.1 - - [08/Mar/2025 16:09:27] "POST /login HTTP/1.1" 200 -
+2025-03-08 16:09:27,158 INFO: 127.0.0.1 - - [08/Mar/2025 16:09:27] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-08 16:09:27,160 INFO: 127.0.0.1 - - [08/Mar/2025 16:09:27] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-08 16:09:35,409 INFO: 127.0.0.1 - - [08/Mar/2025 16:09:35] "POST /login HTTP/1.1" 200 -
+2025-03-08 16:09:35,434 INFO: 127.0.0.1 - - [08/Mar/2025 16:09:35] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-08 16:09:35,435 INFO: 127.0.0.1 - - [08/Mar/2025 16:09:35] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-08 16:09:41,977 INFO: 127.0.0.1 - - [08/Mar/2025 16:09:41] "POST /login HTTP/1.1" 200 -
+2025-03-08 16:09:42,000 INFO: 127.0.0.1 - - [08/Mar/2025 16:09:41] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-08 16:09:42,001 INFO: 127.0.0.1 - - [08/Mar/2025 16:09:42] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-08 16:09:49,797 INFO: 127.0.0.1 - - [08/Mar/2025 16:09:49] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-03-08 16:09:49,806 INFO: 127.0.0.1 - - [08/Mar/2025 16:09:49] "GET /dashboard HTTP/1.1" 200 -
+2025-03-08 16:09:49,830 INFO: 127.0.0.1 - - [08/Mar/2025 16:09:49] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-08 16:09:49,832 INFO: 127.0.0.1 - - [08/Mar/2025 16:09:49] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-08 16:09:56,895 INFO: 127.0.0.1 - - [08/Mar/2025 16:09:56] "GET /create HTTP/1.1" 200 -
+2025-03-08 16:09:56,933 INFO: 127.0.0.1 - - [08/Mar/2025 16:09:56] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-08 16:09:56,935 INFO: 127.0.0.1 - - [08/Mar/2025 16:09:56] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-08 16:12:10,590 INFO: 127.0.0.1 - - [08/Mar/2025 16:12:10] "POST /create HTTP/1.1" 200 -
+2025-03-08 16:12:10,616 INFO: 127.0.0.1 - - [08/Mar/2025 16:12:10] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-08 16:12:10,617 INFO: 127.0.0.1 - - [08/Mar/2025 16:12:10] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-08 16:12:12,370 INFO: 127.0.0.1 - - [08/Mar/2025 16:12:12] "POST /get_columns HTTP/1.1" 200 -

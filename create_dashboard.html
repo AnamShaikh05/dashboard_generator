@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Dashboard - Dashboard Generator</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <h1>Dashboard Generator</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="{{ url_for('dashboard') }}">My Dashboards</a></li>
+                    <li><a href="{{ url_for('create_dashboard') }}" class="active">Create New</a></li>
+                    <li><a href="{{ url_for('logout') }}">Logout ({{ session.username }})</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="create-dashboard">
+            <h2>Create Your Dashboard</h2>
+            <p class="file-info">File: <strong>{{ filename }}</strong></p>
+            
+            <div class="dashboard-form">
+                <div class="form-section">
+                    <h3>Dashboard Settings</h3>
+                    <div class="form-group">
+                        <label for="dashboard-name">Dashboard Name</label>
+                        <input type="text" id="dashboard-name" required>
+                    </div>
+                    
+                    {% if sheets %}
+                    <div class="form-group">
+                        <label for="sheet-select">Select Sheet</label>
+                        <select id="sheet-select">
+                            {% for sheet in sheets %}
+                            <option value="{{ sheet }}">{{ sheet }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    {% endif %}
+                    
+                    <div class="form-group">
+                        <label for="dashboard-theme">Dashboard Theme</label>
+                        <select id="dashboard-theme">
+                            <option value="light">Light</option>
+                            <option value="dark">Dark</option>
+                            <option value="blue">Blue</option>
+                            <option value="green">Green</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="form-section">
+                    <h3>Data Preview</h3>
+                    <div id="data-preview" class="data-preview">
+                        <p>Loading data preview...</p>
+                    </div>
+                </div>
+                
+                <div class="form-section">
+                    <h3>Graphs</h3>
+                    <div class="form-group">
+                        <label for="num-graphs">Number of Graphs</label>
+                        <input type="number" id="num-graphs" min="1" max="12" value="1">
+                    </div>
+                    
+                    <div id="graphs-container">
+                        <!-- Graph configuration forms will be added here dynamically -->
+                    </div>
+                </div>
+                
+                <div class="form-actions">
+                    <button id="save-dashboard" class="btn primary">Generate Dashboard</button>
+                </div>
+            </div>
+            
+            <div id="dashboard-preview" class="dashboard-preview">
+                <h3>Dashboard Preview</h3>
+                <div id="preview-container" class="preview-container">
+                    <!-- Preview graphs will be rendered here -->
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>© 2025 Dashboard Generator. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="/static/js/script.js"></script>
+    <script>
+        // Global variables
+        let columns = [];
+        let currentGraphs = 1;
+        let columnValues = {};
+
+        const graphTypes = {
+            'bar': { requiresX: true, requiresY: true, label: 'Bar Chart' },
+            'line': { requiresX: true, requiresY: true, label: 'Line Chart' },
+            'scatter': { requiresX: true, requiresY: true, label: 'Scatter Plot' },
+            'pie': { requiresX: true, requiresY: true, label: 'Pie Chart' },
+            'donut': { requiresX: true, requiresY: true, label: 'Donut Chart' },
+            'histogram': { requiresX: true, requiresY: false, label: 'Histogram' },
+            'clustered-bar': { requiresX: true, requiresY: true, label: 'Clustered Bar Chart' },
+            'joint-bar': { requiresX: true, requiresY: true, label: 'Joint Bar Chart' },
+            'gauge': { requiresX: false, requiresY: true, label: 'Gauge Card' },
+            'map': { requiresX: true, requiresY: true, label: 'Map Chart' },
+            'distribution': { requiresX: true, requiresY: true, label: 'Distribution Chart' },
+            'number': { requiresX: false, requiresY: true, label: 'Number Card' }
+        };
+
+        const graphColors = [
+            '#3498db', '#2ecc71', '#e74c3c', '#f39c12', '#9b59b6',
+            '#1abc9c', '#d35400', '#34495e', '#16a085', '#c0392b',
+            '#8e44ad', '#27ae60'
+        ];
+
+        document.addEventListener('DOMContentLoaded', function() {
+            loadDataColumns();
+            document.getElementById('num-graphs').addEventListener('change', updateGraphForms);
+            document.getElementById('save-dashboard').addEventListener('click', generateDashboard);
+            {% if sheets %}
+            document.getElementById('sheet-select').addEventListener('change', loadDataColumns);
+            {% endif %}
+            updateGraphForms();
+        });
+
+        function loadDataColumns() {
+            const sheetName = {% if sheets %} document.getElementById('sheet-select').value {% else %} null {% endif %};
+            
+            fetch('/get_columns', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ sheet_name: sheetName })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.error) {
+                    alert('Error loading data: ' + data.error);
+                    return;
+                }
+                columns = data.columns;
+                columnValues = data.unique_values || {};
+                const previewTable = createDataPreviewTable(data.columns, data.sample_data);
+                document.getElementById('data-preview').innerHTML = '';
+                document.getElementById('data-preview').appendChild(previewTable);
+                updateGraphForms();
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('An error occurred while loading data columns.');
+            });
+        }
+
+        function fetchColumnValues(columnName, index) {
+            if (columnValues[columnName]) {
+                updateFilterValues(index, columnValues[columnName]);
+                return;
+            }
+            fetch('/get_column_values', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ 
+                    sheet_name: {% if sheets %} document.getElementById('sheet-select').value {% else %} null {% endif %},
+                    column_name: columnName 
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.error) {
+                    console.error('Error fetching column values:', data.error);
+                    return;
+                }
+                columnValues[columnName] = data.values;
+                updateFilterValues(index, data.values);
+            })
+            .catch(error => console.error('Error:', error));
+        }
+
+        function updateFilterValues(index, values) {
+            const filterValueContainer = document.getElementById(`filter-value-container-${index}`);
+            filterValueContainer.innerHTML = '';
+            
+            if (!values || values.length === 0) {
+                filterValueContainer.innerHTML = '<p>No values available</p>';
+                return;
+            }
+            
+            const selectAllBtn = document.createElement('button');
+            selectAllBtn.textContent = 'Select All';
+            selectAllBtn.type = 'button';
+            selectAllBtn.onclick = () => toggleAllCheckboxes(index, true);
+            filterValueContainer.appendChild(selectAllBtn);
+            
+            const unselectAllBtn = document.createElement('button');
+            unselectAllBtn.textContent = 'Unselect All';
+            unselectAllBtn.type = 'button';
+            unselectAllBtn.onclick = () => toggleAllCheckboxes(index, false);
+            filterValueContainer.appendChild(unselectAllBtn);
+            
+            const checkboxContainer = document.createElement('div');
+            checkboxContainer.className = 'checkbox-container';
+            
+            values.forEach(value => {
+                const label = document.createElement('label');
+                const checkbox = document.createElement('input');
+                checkbox.type = 'checkbox';
+                checkbox.value = value;
+                checkbox.name = `filter-value-${index}`;
+                checkbox.className = 'filter-checkbox';
+                label.appendChild(checkbox);
+                label.appendChild(document.createTextNode(` ${value}`));
+                checkboxContainer.appendChild(label);
+            });
+            
+            filterValueContainer.appendChild(checkboxContainer);
+        }
+
+        function toggleAllCheckboxes(index, checked) {
+            const checkboxes = document.getElementById(`filter-value-container-${index}`)
+                .querySelectorAll('.filter-checkbox');
+            checkboxes.forEach(checkbox => checkbox.checked = checked);
+        }
+
+        function getSelectedFilterValues(index) {
+            const checkboxes = document.getElementById(`filter-value-container-${index}`)
+                .querySelectorAll('.filter-checkbox:checked');
+            return Array.from(checkboxes).map(cb => cb.value);
+        }
+
+        function createDataPreviewTable(columns, data) {
+            const table = document.createElement('table');
+            table.className = 'preview-table';
+            
+            const thead = document.createElement('thead');
+            const headerRow = document.createElement('tr');
+            columns.forEach(column => {
+                const th = document.createElement('th');
+                th.textContent = column;
+                headerRow.appendChild(th);
+            });
+            thead.appendChild(headerRow);
+            table.appendChild(thead);
+            
+            const tbody = document.createElement('tbody');
+            data.forEach(row => {
+                const tr = document.createElement('tr');
+                columns.forEach(column => {
+                    const td = document.createElement('td');
+                    td.textContent = row[column];
+                    tr.appendChild(td);
+                });
+                tbody.appendChild(tr);
+            });
+            table.appendChild(tbody);
+            return table;
+        }
+
+        function updateGraphForms() {
+            const numGraphs = parseInt(document.getElementById('num-graphs').value);
+            const container = document.getElementById('graphs-container');
+            
+            const currentValues = [];
+            for (let i = 0; i < currentGraphs; i++) {
+                const graphForm = document.getElementById(`graph-form-${i}`);
+                if (graphForm) {
+                    currentValues.push({
+                        name: document.getElementById(`graph-name-${i}`).value,
+                        type: document.getElementById(`graph-type-${i}`).value,
+                        xAxis: document.getElementById(`x-axis-${i}`).value,
+                        yAxis: document.getElementById(`y-axis-${i}`).value,
+                        aggregation: document.getElementById(`aggregation-${i}`).value,
+                        color: document.getElementById(`graph-color-${i}`).value,
+                        filterColumn: document.getElementById(`filter-column-${i}`)?.value || '',
+                        filterValues: getSelectedFilterValues(i)
+                    });
+                }
+            }
+            
+            container.innerHTML = '';
+            
+            for (let i = 0; i < numGraphs; i++) {
+                const graphForm = createGraphForm(i, currentValues[i]);
+                container.appendChild(graphForm);
+            }
+            
+            currentGraphs = numGraphs;
+        }
+
+        function createGraphForm(index, values = null) {
+            const formDiv = document.createElement('div');
+            formDiv.className = 'graph-form';
+            formDiv.id = `graph-form-${index}`;
+            
+            const header = document.createElement('h4');
+            header.textContent = `Graph ${index + 1}`;
+            formDiv.appendChild(header);
+            
+            const nameGroup = document.createElement('div');
+            nameGroup.className = 'form-group';
+            const nameLabel = document.createElement('label');
+            nameLabel.setAttribute('for', `graph-name-${index}`);
+            nameLabel.textContent = 'Graph Name';
+            const nameInput = document.createElement('input');
+            nameInput.type = 'text';
+            nameInput.id = `graph-name-${index}`;
+            nameInput.value = values ? values.name : `Graph ${index + 1}`;
+            nameGroup.appendChild(nameLabel);
+            nameGroup.appendChild(nameInput);
+            formDiv.appendChild(nameGroup);
+            
+            const typeGroup = document.createElement('div');
+            typeGroup.className = 'form-group';
+            const typeLabel = document.createElement('label');
+            typeLabel.setAttribute('for', `graph-type-${index}`);
+            typeLabel.textContent = 'Graph Type';
+            const typeSelect = document.createElement('select');
+            typeSelect.id = `graph-type-${index}`;
+            typeSelect.addEventListener('change', () => updateAxisSelectors(index));
+            for (const [type, config] of Object.entries(graphTypes)) {
+                const option = document.createElement('option');
+                option.value = type;
+                option.textContent = config.label;
+                typeSelect.appendChild(option);
+            }
+            if (values && values.type) typeSelect.value = values.type;
+            typeGroup.appendChild(typeLabel);
+            typeGroup.appendChild(typeSelect);
+            formDiv.appendChild(typeGroup);
+            
+            const xAxisGroup = document.createElement('div');
+            xAxisGroup.className = 'form-group x-axis-group';
+            xAxisGroup.id = `x-axis-group-${index}`;
+            const xAxisLabel = document.createElement('label');
+            xAxisLabel.setAttribute('for', `x-axis-${index}`);
+            xAxisLabel.textContent = 'X-Axis';
+            const xAxisSelect = document.createElement('select');
+            xAxisSelect.id = `x-axis-${index}`;
+            columns.forEach(column => {
+                const option = document.createElement('option');
+                option.value = column;
+                option.textContent = column;
+                xAxisSelect.appendChild(option);
+            });
+            if (values && values.xAxis) xAxisSelect.value = values.xAxis;
+            xAxisGroup.appendChild(xAxisLabel);
+            xAxisGroup.appendChild(xAxisSelect);
+            formDiv.appendChild(xAxisGroup);
+            
+            const yAxisGroup = document.createElement('div');
+            yAxisGroup.className = 'form-group y-axis-group';
+            yAxisGroup.id = `y-axis-group-${index}`;
+            const yAxisLabel = document.createElement('label');
+            yAxisLabel.setAttribute('for', `y-axis-${index}`);
+            yAxisLabel.textContent = 'Y-Axis';
+            const yAxisSelect = document.createElement('select');
+            yAxisSelect.id = `y-axis-${index}`;
+            columns.forEach(column => {
+                const option = document.createElement('option');
+                option.value = column;
+                option.textContent = column;
+                yAxisSelect.appendChild(option);
+            });
+            if (values && values.yAxis) yAxisSelect.value = values.yAxis;
+            yAxisGroup.appendChild(yAxisLabel);
+            yAxisGroup.appendChild(yAxisSelect);
+            formDiv.appendChild(yAxisGroup);
+            
+            const filterGroup = document.createElement('div');
+            filterGroup.className = 'form-group';
+            const filterLabel = document.createElement('label');
+            filterLabel.setAttribute('for', `filter-column-${index}`);
+            filterLabel.textContent = 'Filter Column (Optional)';
+            const filterSelect = document.createElement('select');
+            filterSelect.id = `filter-column-${index}`;
+            filterSelect.addEventListener('change', (e) => {
+                if (e.target.value) fetchColumnValues(e.target.value, index);
+                else updateFilterValues(index, []);
+            });
+            const noFilterOption = document.createElement('option');
+            noFilterOption.value = '';
+            noFilterOption.textContent = 'No Filter';
+            filterSelect.appendChild(noFilterOption);
+            columns.forEach(column => {
+                const option = document.createElement('option');
+                option.value = column;
+                option.textContent = column;
+                filterSelect.appendChild(option);
+            });
+            if (values && values.filterColumn) filterSelect.value = values.filterColumn;
+            filterGroup.appendChild(filterLabel);
+            filterGroup.appendChild(filterSelect);
+            formDiv.appendChild(filterGroup);
+            
+            const filterValueGroup = document.createElement('div');
+            filterValueGroup.className = 'form-group filter-value-group';
+            const filterValueLabel = document.createElement('label');
+            filterValueLabel.textContent = 'Filter Values:';
+            filterValueLabel.className = 'filter-value-label';
+            const filterValueContainer = document.createElement('div');
+            filterValueContainer.id = `filter-value-container-${index}`;
+            filterValueContainer.className = 'filter-value-container';
+            filterValueGroup.appendChild(filterValueLabel);
+            filterValueGroup.appendChild(filterValueContainer);
+            formDiv.appendChild(filterValueGroup);
+            
+            const style = document.createElement('style');
+            style.textContent = `
+                #filter-value-container-${index} {
+                    max-height: 150px;
+                    overflow-y: auto;
+                    border: 1px solid #ddd;
+                    padding: 10px;
+                    background: #f9f9f9;
+                    border-radius: 4px;
+                    flex: 1;
+                }
+                #filter-value-container-${index} button {
+                    margin: 0 5px 10px 0;
+                    padding: 5px 10px;
+                    background: #3498db;
+                    color: white;
+                    border: none;
+                    border-radius: 3px;
+                    cursor: pointer;
+                }
+                #filter-value-container-${index} button:hover {
+                    background: #2980b9;
+                }
+                #filter-value-container-${index} .checkbox-container {
+                    display: flex;
+                    flex-direction: column;
+                }
+                #filter-value-container-${index} label {
+                    margin: 5px 0;
+                    font-size: 14px;
+                }
+                #filter-value-container-${index} input[type="checkbox"] {
+                    margin-right: 5px;
+                }
+                .filter-value-group {
+                    display: flex;
+                    align-items: flex-start;
+                    gap: 10px;
+                }
+                .filter-value-label {
+                    margin-top: 10px;
+                    white-space: nowrap;
+                }
+            `;
+            formDiv.appendChild(style);
+            
+            const aggGroup = document.createElement('div');
+            aggGroup.className = 'form-group';
+            const aggLabel = document.createElement('label');
+            aggLabel.setAttribute('for', `aggregation-${index}`);
+            aggLabel.textContent = 'Aggregation Method';
+            const aggSelect = document.createElement('select');
+            aggSelect.id = `aggregation-${index}`;
+            const aggMethods = [
+                { value: '', label: 'None' },
+                { value: 'sum', label: 'Sum' },
+                { value: 'count', label: 'Count' },
+                { value: 'avg', label: 'Average' },
+                { value: 'min', label: 'Minimum' },
+                { value: 'max', label: 'Maximum' }
+            ];
+            aggMethods.forEach(method => {
+                const option = document.createElement('option');
+                option.value = method.value;
+                option.textContent = method.label;
+                aggSelect.appendChild(option);
+            });
+            if (values && values.aggregation) aggSelect.value = values.aggregation;
+            aggGroup.appendChild(aggLabel);
+            aggGroup.appendChild(aggSelect);
+            formDiv.appendChild(aggGroup);
+            
+            const colorGroup = document.createElement('div');
+            colorGroup.className = 'form-group';
+            const colorLabel = document.createElement('label');
+            colorLabel.setAttribute('for', `graph-color-${index}`);
+            colorLabel.textContent = 'Graph Color';
+            const colorSelect = document.createElement('select');
+            colorSelect.id = `graph-color-${index}`;
+            graphColors.forEach((color, i) => {
+                const option = document.createElement('option');
+                option.value = color;
+                option.textContent = `Color ${i + 1}`;
+                option.style.backgroundColor = color;
+                colorSelect.appendChild(option);
+            });
+            if (values && values.color) colorSelect.value = values.color;
+            else colorSelect.value = graphColors[index % graphColors.length];
+            colorGroup.appendChild(colorLabel);
+            colorGroup.appendChild(colorSelect);
+            formDiv.appendChild(colorGroup);
+            
+            setTimeout(() => {
+                updateAxisSelectors(index);
+                if (values && values.filterColumn) {
+                    fetchColumnValues(values.filterColumn, index);
+                    setTimeout(() => {
+                        if (values.filterValues && values.filterValues.length > 0) {
+                            const checkboxes = document.getElementById(`filter-value-container-${index}`)
+                                .querySelectorAll('.filter-checkbox');
+                            checkboxes.forEach(cb => {
+                                if (values.filterValues.includes(cb.value)) cb.checked = true;
+                            });
+                        }
+                    }, 100);
+                }
+            }, 0);
+            
+            return formDiv;
+        }
+
+        function updateAxisSelectors(index) {
+            const graphType = document.getElementById(`graph-type-${index}`).value;
+            const xAxisGroup = document.getElementById(`x-axis-group-${index}`);
+            const yAxisGroup = document.getElementById(`y-axis-group-${index}`);
+            const config = graphTypes[graphType];
+            
+            xAxisGroup.style.display = config.requiresX ? 'block' : 'none';
+            yAxisGroup.style.display = config.requiresY ? 'block' : 'none';
+        }
+
+        function generateDashboard() {
+            const dashboardName = document.getElementById('dashboard-name').value;
+            
+            if (!dashboardName) {
+                alert('Please enter a dashboard name.');
+                return;
+            }
+            
+            const sheetName = {% if sheets %} document.getElementById('sheet-select').value {% else %} null {% endif %};
+            const theme = document.getElementById('dashboard-theme').value;
+            const graphs = [];
+            
+            for (let i = 0; i < currentGraphs; i++) {
+                const graphName = document.getElementById(`graph-name-${i}`).value || `Graph ${i + 1}`;
+                const graphType = document.getElementById(`graph-type-${i}`).value;
+                const xAxis = document.getElementById(`x-axis-${i}`).value || null;
+                const yAxis = document.getElementById(`y-axis-${i}`).value || null;
+                const filterColumn = document.getElementById(`filter-column-${i}`).value || null;
+                const filterValues = getSelectedFilterValues(i);
+                const aggregation = document.getElementById(`aggregation-${i}`).value || null;
+                const color = document.getElementById(`graph-color-${i}`).value || '#3498db';
+                
+                const graphConfig = graphTypes[graphType];
+                
+                if ((graphConfig.requiresX && !xAxis) || (graphConfig.requiresY && !yAxis)) {
+                    console.warn(`Skipping graph ${i} due to missing required axes`);
+                    continue;
+                }
+                
+                graphs.push({
+                    name: graphName,
+                    type: graphType,
+                    x_axis: xAxis,
+                    y_axis: yAxis,
+                    filter_column: filterColumn,
+                    filter_values: filterValues,
+                    aggregation: aggregation,
+                    color: color
+                });
+            }
+            
+            if (graphs.length === 0) {
+                alert('Please configure at least one valid graph.');
+                return;
+            }
+            
+            const dashboardConfig = {
+                dashboard_name: dashboardName,
+                sheet_name: sheetName,
+                theme: theme,
+                graphs: graphs
+            };
+            
+            fetch('/save_dashboard', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(dashboardConfig)
+            })
+            .then(response => {
+                if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+                return response.json();
+            })
+            .then(data => {
+                if (data.error) {
+                    console.error('Server error:', data.error);
+                    alert('Error generating dashboard: ' + data.error);
+                    return;
+                }
+                alert('Dashboard generated successfully!');
+                window.location.href = '/view_dashboard/' + data.dashboard_id;
+            })
+            .catch(error => {
+                console.error('Error generating dashboard:', error);
+                alert('An error occurred while generating the dashboard: ' + error.message);
+            });
+        }
+    </script>
+</body>
+</html>
