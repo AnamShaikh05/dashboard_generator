@@ -9,7 +9,8 @@ import numpy as np
 from datetime import datetime
 import logging
 
-app = Flask(__name__)
+# Initialize Flask app with templates in the current directory
+app = Flask(__name__, template_folder='.')  # '.' means the same directory as this script
 app.secret_key = 'your_secret_key'  # Change this to a random secret key
 UPLOAD_FOLDER = 'uploads'
 ALLOWED_EXTENSIONS = {'csv', 'xls', 'xlsx'}
